@@ -8,19 +8,32 @@
 import SwiftUI
 
 struct ContentView: View {
+    @EnvironmentObject var cartManager: CartManager
+    
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
+        NavigationView {
+            MainShopView()
+                .navigationTitle("WeSellGames")
+                .toolbar {
+                    NavigationLink {
+                        ProfileView()
+                    } label: {
+                        ProfileButton()
+                    }
+                    NavigationLink {
+                        CartView()
+                            .environmentObject(cartManager)
+                    } label: {
+                        CartButton(numberOfProduct: cartManager.products.count)
+                    }
+                }
         }
-        .padding()
     }
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
+            .environmentObject(CartManager())
     }
 }

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>773110451477-ujjip8v1luhetbhds417a8foieiug7o3.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.773110451477-ujjip8v1luhetbhds417a8foieiug7o3</string>
+	<key>API_KEY</key>
+	<string>AIzaSyC6xXAukzSRsSJ_XIzoTa0YNRHOIL0CD7M</string>
+	<key>GCM_SENDER_ID</key>
+	<string>773110451477</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.vitalivyucheiski.WeSellGames</string>
+	<key>PROJECT_ID</key>
+	<string>wesellgamesapp</string>
+	<key>STORAGE_BUCKET</key>
+	<string>wesellgamesapp.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:773110451477:ios:a0e785a769d3efb8432d1c</string>
+</dict>
+</plist>

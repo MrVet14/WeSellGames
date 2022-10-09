@@ -7,18 +7,44 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		51838ACF28F20B7E0088A337 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51838ACE28F20B7E0088A337 /* Product.swift */; };
+		51838AD128F20E480088A337 /* ProductCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51838AD028F20E480088A337 /* ProductCard.swift */; };
+		51838AD528F212450088A337 /* MainShopView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51838AD428F212450088A337 /* MainShopView.swift */; };
+		51838AD728F214FC0088A337 /* CartButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51838AD628F214FC0088A337 /* CartButton.swift */; };
+		51838AD928F217350088A337 /* CartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51838AD828F217350088A337 /* CartView.swift */; };
+		51838ADD28F218CF0088A337 /* ProfileButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51838ADC28F218CF0088A337 /* ProfileButton.swift */; };
+		51838ADF28F219A80088A337 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51838ADE28F219A80088A337 /* ProfileView.swift */; };
+		51838AE128F21A550088A337 /* CartManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51838AE028F21A550088A337 /* CartManager.swift */; };
+		51838AE328F246A70088A337 /* ProductRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51838AE228F246A70088A337 /* ProductRow.swift */; };
+		51838AE528F24B850088A337 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 51838AE428F24B850088A337 /* GoogleService-Info.plist */; };
+		51838AE828F255FD0088A337 /* ProductCartTappedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51838AE728F255FD0088A337 /* ProductCartTappedView.swift */; };
 		519C63D028F1C60900DBEA34 /* WeSellGamesApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 519C63CF28F1C60900DBEA34 /* WeSellGamesApp.swift */; };
 		519C63D228F1C60900DBEA34 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 519C63D128F1C60900DBEA34 /* ContentView.swift */; };
 		519C63D428F1C60B00DBEA34 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 519C63D328F1C60B00DBEA34 /* Assets.xcassets */; };
 		519C63D728F1C60B00DBEA34 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 519C63D628F1C60B00DBEA34 /* Preview Assets.xcassets */; };
+		72E9B738D6830E81E72926E0 /* Pods_WeSellGames.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8E402E5D45A343221330EAD /* Pods_WeSellGames.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		44041C8DE4DFAD1BD53D8039 /* Pods-WeSellGames.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WeSellGames.debug.xcconfig"; path = "Target Support Files/Pods-WeSellGames/Pods-WeSellGames.debug.xcconfig"; sourceTree = "<group>"; };
+		51838ACE28F20B7E0088A337 /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
+		51838AD028F20E480088A337 /* ProductCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCard.swift; sourceTree = "<group>"; };
+		51838AD428F212450088A337 /* MainShopView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainShopView.swift; sourceTree = "<group>"; };
+		51838AD628F214FC0088A337 /* CartButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartButton.swift; sourceTree = "<group>"; };
+		51838AD828F217350088A337 /* CartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartView.swift; sourceTree = "<group>"; };
+		51838ADC28F218CF0088A337 /* ProfileButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileButton.swift; sourceTree = "<group>"; };
+		51838ADE28F219A80088A337 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		51838AE028F21A550088A337 /* CartManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartManager.swift; sourceTree = "<group>"; };
+		51838AE228F246A70088A337 /* ProductRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductRow.swift; sourceTree = "<group>"; };
+		51838AE428F24B850088A337 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		51838AE728F255FD0088A337 /* ProductCartTappedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCartTappedView.swift; sourceTree = "<group>"; };
 		519C63CC28F1C60900DBEA34 /* WeSellGames.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeSellGames.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		519C63CF28F1C60900DBEA34 /* WeSellGamesApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeSellGamesApp.swift; sourceTree = "<group>"; };
 		519C63D128F1C60900DBEA34 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		519C63D328F1C60B00DBEA34 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		519C63D628F1C60B00DBEA34 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		A567830837E6160A0521D493 /* Pods-WeSellGames.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WeSellGames.release.xcconfig"; path = "Target Support Files/Pods-WeSellGames/Pods-WeSellGames.release.xcconfig"; sourceTree = "<group>"; };
+		D8E402E5D45A343221330EAD /* Pods_WeSellGames.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WeSellGames.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -26,17 +52,31 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				72E9B738D6830E81E72926E0 /* Pods_WeSellGames.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		51838ACD28F20B200088A337 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				51838AD028F20E480088A337 /* ProductCard.swift */,
+				51838AD628F214FC0088A337 /* CartButton.swift */,
+				51838ADC28F218CF0088A337 /* ProfileButton.swift */,
+				51838AE228F246A70088A337 /* ProductRow.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
 		519C63C328F1C60900DBEA34 = {
 			isa = PBXGroup;
 			children = (
 				519C63CE28F1C60900DBEA34 /* WeSellGames */,
 				519C63CD28F1C60900DBEA34 /* Products */,
+				768088B196842BF744FB3494 /* Pods */,
+				774B331FB908892C14C31B50 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -51,9 +91,11 @@
 		519C63CE28F1C60900DBEA34 /* WeSellGames */ = {
 			isa = PBXGroup;
 			children = (
-				519C63CF28F1C60900DBEA34 /* WeSellGamesApp.swift */,
 				519C63D128F1C60900DBEA34 /* ContentView.swift */,
-				519C63D328F1C60B00DBEA34 /* Assets.xcassets */,
+				519C63DD28F20A7600DBEA34 /* Views */,
+				519C63DE28F20A7C00DBEA34 /* Models */,
+				519C63DF28F20A8800DBEA34 /* Resources */,
+				51838AE028F21A550088A337 /* CartManager.swift */,
 				519C63D528F1C60B00DBEA34 /* Preview Content */,
 			);
 			path = WeSellGames;
@@ -67,6 +109,53 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		519C63DD28F20A7600DBEA34 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				51838ACD28F20B200088A337 /* Components */,
+				51838AD428F212450088A337 /* MainShopView.swift */,
+				51838AD828F217350088A337 /* CartView.swift */,
+				51838ADE28F219A80088A337 /* ProfileView.swift */,
+				51838AE728F255FD0088A337 /* ProductCartTappedView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		519C63DE28F20A7C00DBEA34 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				51838ACE28F20B7E0088A337 /* Product.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		519C63DF28F20A8800DBEA34 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				51838AE428F24B850088A337 /* GoogleService-Info.plist */,
+				519C63CF28F1C60900DBEA34 /* WeSellGamesApp.swift */,
+				519C63D328F1C60B00DBEA34 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		768088B196842BF744FB3494 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				44041C8DE4DFAD1BD53D8039 /* Pods-WeSellGames.debug.xcconfig */,
+				A567830837E6160A0521D493 /* Pods-WeSellGames.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		774B331FB908892C14C31B50 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D8E402E5D45A343221330EAD /* Pods_WeSellGames.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -74,9 +163,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 519C63DA28F1C60B00DBEA34 /* Build configuration list for PBXNativeTarget "WeSellGames" */;
 			buildPhases = (
+				81E12C88382C42DD6A5936B2 /* [CP] Check Pods Manifest.lock */,
 				519C63C828F1C60900DBEA34 /* Sources */,
 				519C63C928F1C60900DBEA34 /* Frameworks */,
 				519C63CA28F1C60900DBEA34 /* Resources */,
+				ED5E9086210D7E04005DBE15 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -127,10 +218,53 @@
 			files = (
 				519C63D728F1C60B00DBEA34 /* Preview Assets.xcassets in Resources */,
 				519C63D428F1C60B00DBEA34 /* Assets.xcassets in Resources */,
+				51838AE528F24B850088A337 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		81E12C88382C42DD6A5936B2 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-WeSellGames-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		ED5E9086210D7E04005DBE15 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-WeSellGames/Pods-WeSellGames-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-WeSellGames/Pods-WeSellGames-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-WeSellGames/Pods-WeSellGames-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		519C63C828F1C60900DBEA34 /* Sources */ = {
@@ -138,7 +272,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				519C63D228F1C60900DBEA34 /* ContentView.swift in Sources */,
+				51838ADF28F219A80088A337 /* ProfileView.swift in Sources */,
+				51838AD928F217350088A337 /* CartView.swift in Sources */,
+				51838ADD28F218CF0088A337 /* ProfileButton.swift in Sources */,
 				519C63D028F1C60900DBEA34 /* WeSellGamesApp.swift in Sources */,
+				51838AE128F21A550088A337 /* CartManager.swift in Sources */,
+				51838ACF28F20B7E0088A337 /* Product.swift in Sources */,
+				51838AE328F246A70088A337 /* ProductRow.swift in Sources */,
+				51838AD528F212450088A337 /* MainShopView.swift in Sources */,
+				51838AD128F20E480088A337 /* ProductCard.swift in Sources */,
+				51838AE828F255FD0088A337 /* ProductCartTappedView.swift in Sources */,
+				51838AD728F214FC0088A337 /* CartButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -195,7 +339,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -249,7 +393,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -261,6 +405,7 @@
 		};
 		519C63DB28F1C60B00DBEA34 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 44041C8DE4DFAD1BD53D8039 /* Pods-WeSellGames.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -270,11 +415,12 @@
 				DEVELOPMENT_TEAM = V936C69V6G;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = WeSellGames;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.shopping";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -282,14 +428,18 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.vitalivyucheiski.WeSellGames;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
 		519C63DC28F1C60B00DBEA34 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A567830837E6160A0521D493 /* Pods-WeSellGames.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -299,11 +449,12 @@
 				DEVELOPMENT_TEAM = V936C69V6G;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = WeSellGames;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.shopping";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -311,9 +462,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.vitalivyucheiski.WeSellGames;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
