@@ -22,11 +22,24 @@
 		519C63D228F1C60900DBEA34 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 519C63D128F1C60900DBEA34 /* ContentView.swift */; };
 		519C63D428F1C60B00DBEA34 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 519C63D328F1C60B00DBEA34 /* Assets.xcassets */; };
 		519C63D728F1C60B00DBEA34 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 519C63D628F1C60B00DBEA34 /* Preview Assets.xcassets */; };
-		72E9B738D6830E81E72926E0 /* Pods_WeSellGames.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8E402E5D45A343221330EAD /* Pods_WeSellGames.framework */; };
+		51A200C328F32DC100069043 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 51A200C228F32DC100069043 /* FirebaseAnalytics */; };
+		51A200C528F32DC100069043 /* FirebaseAnalyticsSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 51A200C428F32DC100069043 /* FirebaseAnalyticsSwift */; };
+		51A200C728F32DC100069043 /* FirebaseAppCheck in Frameworks */ = {isa = PBXBuildFile; productRef = 51A200C628F32DC100069043 /* FirebaseAppCheck */; };
+		51A200C928F32DC100069043 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 51A200C828F32DC100069043 /* FirebaseAuth */; };
+		51A200CB28F32DC100069043 /* FirebaseAuthCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = 51A200CA28F32DC100069043 /* FirebaseAuthCombine-Community */; };
+		51A200CD28F32DC100069043 /* FirebaseCrashlytics in Frameworks */ = {isa = PBXBuildFile; productRef = 51A200CC28F32DC100069043 /* FirebaseCrashlytics */; };
+		51A200CF28F32DC100069043 /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = 51A200CE28F32DC100069043 /* FirebaseDatabase */; };
+		51A200D128F32DC100069043 /* FirebaseDatabaseSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 51A200D028F32DC100069043 /* FirebaseDatabaseSwift */; };
+		51A200D328F32DC100069043 /* FirebaseDynamicLinks in Frameworks */ = {isa = PBXBuildFile; productRef = 51A200D228F32DC100069043 /* FirebaseDynamicLinks */; };
+		51A200D528F32DC100069043 /* FirebaseFunctions in Frameworks */ = {isa = PBXBuildFile; productRef = 51A200D428F32DC100069043 /* FirebaseFunctions */; };
+		51A200D728F32DC100069043 /* FirebaseFunctionsCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = 51A200D628F32DC100069043 /* FirebaseFunctionsCombine-Community */; };
+		51A200D928F32DC100069043 /* FirebaseInstallations in Frameworks */ = {isa = PBXBuildFile; productRef = 51A200D828F32DC100069043 /* FirebaseInstallations */; };
+		51A200DB28F32DC100069043 /* FirebasePerformance in Frameworks */ = {isa = PBXBuildFile; productRef = 51A200DA28F32DC100069043 /* FirebasePerformance */; };
+		51A200DD28F32DC100069043 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 51A200DC28F32DC100069043 /* FirebaseStorage */; };
+		51A200DF28F32DC100069043 /* FirebaseStorageCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = 51A200DE28F32DC100069043 /* FirebaseStorageCombine-Community */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		44041C8DE4DFAD1BD53D8039 /* Pods-WeSellGames.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WeSellGames.debug.xcconfig"; path = "Target Support Files/Pods-WeSellGames/Pods-WeSellGames.debug.xcconfig"; sourceTree = "<group>"; };
 		51838ACE28F20B7E0088A337 /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
 		51838AD028F20E480088A337 /* ProductCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCard.swift; sourceTree = "<group>"; };
 		51838AD428F212450088A337 /* MainShopView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainShopView.swift; sourceTree = "<group>"; };
@@ -43,8 +56,6 @@
 		519C63D128F1C60900DBEA34 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		519C63D328F1C60B00DBEA34 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		519C63D628F1C60B00DBEA34 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		A567830837E6160A0521D493 /* Pods-WeSellGames.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WeSellGames.release.xcconfig"; path = "Target Support Files/Pods-WeSellGames/Pods-WeSellGames.release.xcconfig"; sourceTree = "<group>"; };
-		D8E402E5D45A343221330EAD /* Pods_WeSellGames.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WeSellGames.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,7 +63,21 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				72E9B738D6830E81E72926E0 /* Pods_WeSellGames.framework in Frameworks */,
+				51A200D128F32DC100069043 /* FirebaseDatabaseSwift in Frameworks */,
+				51A200C528F32DC100069043 /* FirebaseAnalyticsSwift in Frameworks */,
+				51A200C728F32DC100069043 /* FirebaseAppCheck in Frameworks */,
+				51A200D928F32DC100069043 /* FirebaseInstallations in Frameworks */,
+				51A200C328F32DC100069043 /* FirebaseAnalytics in Frameworks */,
+				51A200CD28F32DC100069043 /* FirebaseCrashlytics in Frameworks */,
+				51A200D328F32DC100069043 /* FirebaseDynamicLinks in Frameworks */,
+				51A200DF28F32DC100069043 /* FirebaseStorageCombine-Community in Frameworks */,
+				51A200C928F32DC100069043 /* FirebaseAuth in Frameworks */,
+				51A200D528F32DC100069043 /* FirebaseFunctions in Frameworks */,
+				51A200CF28F32DC100069043 /* FirebaseDatabase in Frameworks */,
+				51A200DB28F32DC100069043 /* FirebasePerformance in Frameworks */,
+				51A200DD28F32DC100069043 /* FirebaseStorage in Frameworks */,
+				51A200D728F32DC100069043 /* FirebaseFunctionsCombine-Community in Frameworks */,
+				51A200CB28F32DC100069043 /* FirebaseAuthCombine-Community in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -75,8 +100,6 @@
 			children = (
 				519C63CE28F1C60900DBEA34 /* WeSellGames */,
 				519C63CD28F1C60900DBEA34 /* Products */,
-				768088B196842BF744FB3494 /* Pods */,
-				774B331FB908892C14C31B50 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -139,23 +162,6 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
-		768088B196842BF744FB3494 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				44041C8DE4DFAD1BD53D8039 /* Pods-WeSellGames.debug.xcconfig */,
-				A567830837E6160A0521D493 /* Pods-WeSellGames.release.xcconfig */,
-			);
-			path = Pods;
-			sourceTree = "<group>";
-		};
-		774B331FB908892C14C31B50 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				D8E402E5D45A343221330EAD /* Pods_WeSellGames.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -163,17 +169,32 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 519C63DA28F1C60B00DBEA34 /* Build configuration list for PBXNativeTarget "WeSellGames" */;
 			buildPhases = (
-				81E12C88382C42DD6A5936B2 /* [CP] Check Pods Manifest.lock */,
 				519C63C828F1C60900DBEA34 /* Sources */,
 				519C63C928F1C60900DBEA34 /* Frameworks */,
 				519C63CA28F1C60900DBEA34 /* Resources */,
-				ED5E9086210D7E04005DBE15 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = WeSellGames;
+			packageProductDependencies = (
+				51A200C228F32DC100069043 /* FirebaseAnalytics */,
+				51A200C428F32DC100069043 /* FirebaseAnalyticsSwift */,
+				51A200C628F32DC100069043 /* FirebaseAppCheck */,
+				51A200C828F32DC100069043 /* FirebaseAuth */,
+				51A200CA28F32DC100069043 /* FirebaseAuthCombine-Community */,
+				51A200CC28F32DC100069043 /* FirebaseCrashlytics */,
+				51A200CE28F32DC100069043 /* FirebaseDatabase */,
+				51A200D028F32DC100069043 /* FirebaseDatabaseSwift */,
+				51A200D228F32DC100069043 /* FirebaseDynamicLinks */,
+				51A200D428F32DC100069043 /* FirebaseFunctions */,
+				51A200D628F32DC100069043 /* FirebaseFunctionsCombine-Community */,
+				51A200D828F32DC100069043 /* FirebaseInstallations */,
+				51A200DA28F32DC100069043 /* FirebasePerformance */,
+				51A200DC28F32DC100069043 /* FirebaseStorage */,
+				51A200DE28F32DC100069043 /* FirebaseStorageCombine-Community */,
+			);
 			productName = WeSellGames;
 			productReference = 519C63CC28F1C60900DBEA34 /* WeSellGames.app */;
 			productType = "com.apple.product-type.application";
@@ -202,6 +223,9 @@
 				Base,
 			);
 			mainGroup = 519C63C328F1C60900DBEA34;
+			packageReferences = (
+				51A200C128F32DC100069043 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
 			productRefGroup = 519C63CD28F1C60900DBEA34 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -223,48 +247,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		81E12C88382C42DD6A5936B2 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-WeSellGames-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		ED5E9086210D7E04005DBE15 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-WeSellGames/Pods-WeSellGames-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-WeSellGames/Pods-WeSellGames-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-WeSellGames/Pods-WeSellGames-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		519C63C828F1C60900DBEA34 /* Sources */ = {
@@ -405,7 +387,6 @@
 		};
 		519C63DB28F1C60B00DBEA34 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 44041C8DE4DFAD1BD53D8039 /* Pods-WeSellGames.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -439,7 +420,6 @@
 		};
 		519C63DC28F1C60B00DBEA34 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A567830837E6160A0521D493 /* Pods-WeSellGames.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -493,6 +473,95 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		51A200C128F32DC100069043 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 9.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		51A200C228F32DC100069043 /* FirebaseAnalytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 51A200C128F32DC100069043 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalytics;
+		};
+		51A200C428F32DC100069043 /* FirebaseAnalyticsSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 51A200C128F32DC100069043 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalyticsSwift;
+		};
+		51A200C628F32DC100069043 /* FirebaseAppCheck */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 51A200C128F32DC100069043 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAppCheck;
+		};
+		51A200C828F32DC100069043 /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 51A200C128F32DC100069043 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+		51A200CA28F32DC100069043 /* FirebaseAuthCombine-Community */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 51A200C128F32DC100069043 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = "FirebaseAuthCombine-Community";
+		};
+		51A200CC28F32DC100069043 /* FirebaseCrashlytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 51A200C128F32DC100069043 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseCrashlytics;
+		};
+		51A200CE28F32DC100069043 /* FirebaseDatabase */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 51A200C128F32DC100069043 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseDatabase;
+		};
+		51A200D028F32DC100069043 /* FirebaseDatabaseSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 51A200C128F32DC100069043 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseDatabaseSwift;
+		};
+		51A200D228F32DC100069043 /* FirebaseDynamicLinks */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 51A200C128F32DC100069043 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseDynamicLinks;
+		};
+		51A200D428F32DC100069043 /* FirebaseFunctions */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 51A200C128F32DC100069043 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFunctions;
+		};
+		51A200D628F32DC100069043 /* FirebaseFunctionsCombine-Community */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 51A200C128F32DC100069043 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = "FirebaseFunctionsCombine-Community";
+		};
+		51A200D828F32DC100069043 /* FirebaseInstallations */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 51A200C128F32DC100069043 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseInstallations;
+		};
+		51A200DA28F32DC100069043 /* FirebasePerformance */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 51A200C128F32DC100069043 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebasePerformance;
+		};
+		51A200DC28F32DC100069043 /* FirebaseStorage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 51A200C128F32DC100069043 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseStorage;
+		};
+		51A200DE28F32DC100069043 /* FirebaseStorageCombine-Community */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 51A200C128F32DC100069043 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = "FirebaseStorageCombine-Community";
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 519C63C428F1C60900DBEA34 /* Project object */;
 }
