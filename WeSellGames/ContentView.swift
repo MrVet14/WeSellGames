@@ -9,6 +9,7 @@ import SwiftUI
 
 struct ContentView: View {
     @EnvironmentObject var cartManager: CartManager
+    @EnvironmentObject var products: Products
     
     var body: some View {
         NavigationView {
@@ -28,6 +29,7 @@ struct ContentView: View {
                     }
                 }
         }
+        .onAppear { products.getData() }
     }
 }
 

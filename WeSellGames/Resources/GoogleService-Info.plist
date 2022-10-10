@@ -30,5 +30,7 @@
 	<true></true>
 	<key>GOOGLE_APP_ID</key>
 	<string>1:773110451477:ios:a0e785a769d3efb8432d1c</string>
+	<key>DATABASE_URL</key>
+	<string>https://wesellgamesapp-default-rtdb.europe-west1.firebasedatabase.app</string>
 </dict>
 </plist>
