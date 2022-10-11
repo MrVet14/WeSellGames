@@ -13,8 +13,9 @@ import FirebaseStorage
 
 class Products: ObservableObject {
     @Published private(set) var productList = [Product]()
-    @Published private(set) var retrievedProductImages = [UIImage]()
+    //@Published private(set) var retrievedProductImages = [UIImage]()
     //@Published private(set) var dicOfRtvPic = [String: Int]()
+    @Published var retrievedProductImages = [String: URL]()
     
     func getData() {
         let db = Firestore.firestore()
@@ -36,9 +37,9 @@ class Products: ObservableObject {
                                                     description: d["description"] as? String ?? "",
                                                     price: d["price"] as? Double ?? 0)]
                         }
-//                        DispatchQueue.global(qos: .userInteractive).async {
-//                            self.getPhotos()
-//                        }
+                        DispatchQueue.global(qos: .userInteractive).async {
+                            self.getPhotos()
+                        }
                     }
                 }
             } else {
@@ -47,38 +48,32 @@ class Products: ObservableObject {
         }
     }
     
-//    func getPhotos() {
-//        var paths = [String]()
-//        //Getting paths for Images
-//        for path in productList {
-//            paths.append("images/\(path.image).jpg")
-//            for ldPath in path.landImages {
-//                paths.append("images/\(ldPath).jpg")
-//            }
-//        }
-//        print(paths)
-//        //looping through each file path to fetch data
-//        for path in paths {
-//            //Reference to storage
-//            let storageRef = Storage.storage().reference()
-//            //specifying the path
-//            let fileRef = storageRef.child(path)
-//            //Retrieving Data
-//            fileRef.getData(maxSize: 4 * 1024 * 1024) { data, error in
-//                if error == nil && data != nil {
-//                    //Creating UIImage and putting it in retrievedProductImages array
-//                    if let image = UIImage(data: data!) {
-//                        //Putting image onto main thread
-//                        DispatchQueue.main.async {
-//                            self.retrievedProductImages.append(image)
-//                        }
-//                    }
-//                } else {
-//                    print(error ?? "")
-//                }
-//            }
-//        } //End Path loop
-//    }
+    func getPhotos() {
+        var paths = [String]()
+        //Getting paths for Images
+        for path in productList {
+            paths.append("images/\(path.image).jpg")
+            for ldPath in path.landImages {
+                paths.append("images/\(ldPath).jpg")
+            }
+        }
+        //looping through each file path to fetch data
+        for path in paths {
+            //Reference to storage
+            let storageRef = Storage.storage().reference()
+            //specifying the path
+            let fileRef = storageRef.child(path)
+            //Retrieving Data
+            fileRef.downloadURL { url, error in
+                if error == nil && url != nil {
+                    DispatchQueue.main.async {
+                        self.retrievedProductImages[path.replacingOccurrences(of: "images/", with: "").replacingOccurrences(of: ".jpg", with: "")] = url
+                        print("New Entry: \(self.retrievedProductImages)")
+                    }
+                }
+            }
+        } //End Path loop
+    }
     
 }
 

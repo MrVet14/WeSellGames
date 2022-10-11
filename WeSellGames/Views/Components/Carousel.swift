@@ -6,8 +6,11 @@
 //
 
 import SwiftUI
+import SDWebImageSwiftUI
 
 struct Carousel: View {
+    @EnvironmentObject var products: Products
+    
     var product: Product
     @State private var index = 0
     
@@ -15,7 +18,7 @@ struct Carousel: View {
         VStack{
             TabView(selection: $index) {
                 ForEach((0..<product.landImages.count), id: \.self) { index in
-                    Image(product.landImages[index])
+                    WebImage(url: products.retrievedProductImages["\(product.landImages[index])"])
                         .resizable()
                         .frame(height: 250)
                         .cornerRadius(10)

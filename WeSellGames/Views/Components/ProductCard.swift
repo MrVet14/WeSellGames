@@ -6,16 +6,18 @@
 //
 
 import SwiftUI
+import SDWebImageSwiftUI
 
 struct ProductCard: View {
     @EnvironmentObject var cartManager: CartManager
+    @EnvironmentObject var products: Products
     var product: Product
     @State private var showingSheet = false
     
     var body: some View {
         ZStack(alignment: .topTrailing) {
             ZStack(alignment: .bottom) {
-                Image(product.image)
+                WebImage(url: products.retrievedProductImages["\(product.image)"])
                     .resizable()
                     .cornerRadius(20)
                     .frame(width: 180)

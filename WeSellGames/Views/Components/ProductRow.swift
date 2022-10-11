@@ -6,14 +6,16 @@
 //
 
 import SwiftUI
+import SDWebImageSwiftUI
 
 struct ProductRow: View {
+    @EnvironmentObject var products: Products
     @EnvironmentObject var cartManager: CartManager
     var product: Product
     
     var body: some View {
         HStack(spacing: 20) {
-            Image(product.image)
+            WebImage(url: products.retrievedProductImages["\(product.image)"])
                 .resizable()
                 .aspectRatio(contentMode: .fit)
                 .frame(width: 50)

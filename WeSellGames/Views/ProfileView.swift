@@ -10,7 +10,7 @@ import SwiftUI
 struct ProfileView: View {
     var body: some View {
         ScrollView {
-            Text("Your profile is empty")
+                Text("Your profile is empty")
         }
         .navigationTitle("My Profile")
         .padding(.top)
