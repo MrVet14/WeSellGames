@@ -41,6 +41,7 @@ struct ContentView: View {
         .onAppear {
             products.getData()
             userConfig.signedIn = userConfig.isSignedIn
+            userConfig.getUserData()
         }
     }
 }

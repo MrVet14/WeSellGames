@@ -13,60 +13,73 @@ struct Register: View {
     @State private var password: String = ""
     
     var body: some View {
-        VStack {
-            Image("Icon")
-                .resizable()
-                .frame(width: 300, height: 300)
-                .scaledToFit()
-                .padding(.bottom, 60)
+        ZStack {
+            LinearGradient(gradient: Gradient(colors: [Color(red: 0.919, green: 0.177, blue: 0.991), Color(red: 0.377, green: 0.816, blue: 0.879)]), startPoint: .topLeading, endPoint: .bottomTrailing)
+                .ignoresSafeArea()
             
             VStack {
-                TextField("Email", text: $email)
-                    .autocorrectionDisabled()
-                    .textInputAutocapitalization(.never)
-                    .padding()
-                    .background(Color(.secondarySystemBackground))
-                    .cornerRadius(10)
+                Image("Icon")
+                    .resizable()
+                    .frame(width: 300, height: 300)
+                    .scaledToFit()
+                    .padding(.bottom, 60)
                 
-                SecureField("Password", text: $password)
-                    .autocorrectionDisabled()
-                    .textInputAutocapitalization(.never)
-                    .padding()
-                    .background(Color(.secondarySystemBackground))
-                    .cornerRadius(10)
-                
-                Button {
-                    if !email.isEmpty && !password.isEmpty {
-                        userConfig.register(email, password)
-                    }
-                } label: {
-                    Text("Register")
-                        .font(.title2)
+                VStack {
+                    TextField("Email", text: $email)
+                        .autocorrectionDisabled()
+                        .textInputAutocapitalization(.never)
                         .padding()
-                        .foregroundColor(.white)
-                        .frame(width: 250)
-                        .background(Color(hue: 0.519, saturation: 0.683, brightness: 0.703))
+                        .background(.ultraThinMaterial)
                         .cornerRadius(10)
-                }
-                .padding(.top)
-                .padding(.bottom, 5)
+                    
+                    SecureField("Password", text: $password)
+                        .autocorrectionDisabled()
+                        .textInputAutocapitalization(.never)
+                        .padding()
+                        .background(.ultraThinMaterial)
+                        .cornerRadius(10)
+                    
+                    Button {
+                        if !email.isEmpty && !password.isEmpty {
+                            userConfig.register(email, password)
+                        }
+                    } label: {
+                        Text("Register")
+                            .font(.title2)
+                            .padding()
+                            .foregroundColor(.white)
+                            .frame(width: 250)
+                            .background(Color(hue: 0.519, saturation: 0.683, brightness: 0.703))
+                            .cornerRadius(10)
+                    }
+                    .padding(.top)
+                    .padding(.bottom, 5)
 
-                NavigationLink {
-                    SignIn()
-                        .environmentObject(userConfig)
-                } label: {
-                    Text("Already have an account? Sign in")
-                        .foregroundColor(.accentColor)
+                    NavigationLink {
+                        SignIn()
+                            .environmentObject(userConfig)
+                    } label: {
+                        Text("Already have an account? Sign in")
+                            .foregroundColor(.accentColor)
+                    }
+                    .padding(.top, 10)
+                    
+                    Text("By creating account, you are agreeing to our Terms of Service")
+                        .font(.body.bold())
+                        .foregroundColor(.secondary)
+                        .multilineTextAlignment(.center)
+                        .frame(maxHeight: .infinity, alignment: .bottom)
                 }
             }
-        }
-        .padding()
+            .padding()
         .navigationTitle("Register")
+        }
     }
 }
 
-//struct Register_Previews: PreviewProvider {
-//    static var previews: some View {
-//        Register()
-//    }
-//}
+struct Register_Previews: PreviewProvider {
+    static var previews: some View {
+        Register()
+            .environmentObject(UserConfig())
+    }
+}

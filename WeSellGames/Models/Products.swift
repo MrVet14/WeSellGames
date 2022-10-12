@@ -41,7 +41,7 @@ class Products: ObservableObject {
                     }
                 }
             } else {
-                print(error ?? "")
+                print(error?.localizedDescription ?? "")
             }
         }
     }
@@ -67,6 +67,8 @@ class Products: ObservableObject {
                     DispatchQueue.main.async {
                         self?.retrievedProductImages[path.replacingOccurrences(of: "images/", with: "").replacingOccurrences(of: ".jpg", with: "")] = url
                     }
+                } else {
+                    print(error?.localizedDescription ?? "")
                 }
             }
         } //End Path loop
