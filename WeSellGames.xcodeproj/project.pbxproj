@@ -12,6 +12,13 @@
 		511C9C2228F51E9D00C86EE5 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 511C9C2128F51E9D00C86EE5 /* FirebaseAuth */; };
 		511C9C2428F51E9D00C86EE5 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 511C9C2328F51E9D00C86EE5 /* FirebaseFirestore */; };
 		511C9C2628F51E9D00C86EE5 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 511C9C2528F51E9D00C86EE5 /* FirebaseStorage */; };
+		515FE28D28F61A4300EA3EFE /* FirebaseCrashlytics in Frameworks */ = {isa = PBXBuildFile; productRef = 515FE28C28F61A4300EA3EFE /* FirebaseCrashlytics */; };
+		515FE28F28F61A4300EA3EFE /* FirebasePerformance in Frameworks */ = {isa = PBXBuildFile; productRef = 515FE28E28F61A4300EA3EFE /* FirebasePerformance */; };
+		515FE29228F63A5200EA3EFE /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 515FE29128F63A5200EA3EFE /* User.swift */; };
+		515FE29428F63CC100EA3EFE /* UserConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 515FE29328F63CC100EA3EFE /* UserConfig.swift */; };
+		515FE29628F6406C00EA3EFE /* Register.swift in Sources */ = {isa = PBXBuildFile; fileRef = 515FE29528F6406C00EA3EFE /* Register.swift */; };
+		515FE29828F6407E00EA3EFE /* SignIn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 515FE29728F6407E00EA3EFE /* SignIn.swift */; };
+		515FE29C28F64E4B00EA3EFE /* WelcomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 515FE29B28F64E4B00EA3EFE /* WelcomeScreen.swift */; };
 		51838ACF28F20B7E0088A337 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51838ACE28F20B7E0088A337 /* Product.swift */; };
 		51838AD128F20E480088A337 /* ProductCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51838AD028F20E480088A337 /* ProductCard.swift */; };
 		51838AD528F212450088A337 /* MainShopView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51838AD428F212450088A337 /* MainShopView.swift */; };
@@ -32,6 +39,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		515FE29128F63A5200EA3EFE /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		515FE29328F63CC100EA3EFE /* UserConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserConfig.swift; sourceTree = "<group>"; };
+		515FE29528F6406C00EA3EFE /* Register.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Register.swift; sourceTree = "<group>"; };
+		515FE29728F6407E00EA3EFE /* SignIn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignIn.swift; sourceTree = "<group>"; };
+		515FE29B28F64E4B00EA3EFE /* WelcomeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeScreen.swift; sourceTree = "<group>"; };
+		515FE29D28F6804200EA3EFE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		51838ACE28F20B7E0088A337 /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
 		51838AD028F20E480088A337 /* ProductCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCard.swift; sourceTree = "<group>"; };
 		51838AD428F212450088A337 /* MainShopView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainShopView.swift; sourceTree = "<group>"; };
@@ -57,9 +70,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				515FE28F28F61A4300EA3EFE /* FirebasePerformance in Frameworks */,
 				511C9C2028F51E9D00C86EE5 /* FirebaseAnalytics in Frameworks */,
 				511C9C2428F51E9D00C86EE5 /* FirebaseFirestore in Frameworks */,
 				511C9C2228F51E9D00C86EE5 /* FirebaseAuth in Frameworks */,
+				515FE28D28F61A4300EA3EFE /* FirebaseCrashlytics in Frameworks */,
 				511C9C2628F51E9D00C86EE5 /* FirebaseStorage in Frameworks */,
 				511C9C1D28F50CE700C86EE5 /* SDWebImageSwiftUI in Frameworks */,
 			);
@@ -100,6 +115,7 @@
 		519C63CE28F1C60900DBEA34 /* WeSellGames */ = {
 			isa = PBXGroup;
 			children = (
+				515FE29D28F6804200EA3EFE /* Info.plist */,
 				519C63D128F1C60900DBEA34 /* ContentView.swift */,
 				519C63DD28F20A7600DBEA34 /* Views */,
 				519C63DE28F20A7C00DBEA34 /* Models */,
@@ -126,6 +142,9 @@
 				51838AD828F217350088A337 /* CartView.swift */,
 				51838ADE28F219A80088A337 /* ProfileView.swift */,
 				51838AE728F255FD0088A337 /* ProductCartTappedView.swift */,
+				515FE29528F6406C00EA3EFE /* Register.swift */,
+				515FE29728F6407E00EA3EFE /* SignIn.swift */,
+				515FE29B28F64E4B00EA3EFE /* WelcomeScreen.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -135,6 +154,8 @@
 			children = (
 				51838ACE28F20B7E0088A337 /* Product.swift */,
 				51A200E728F3AD9400069043 /* Products.swift */,
+				515FE29128F63A5200EA3EFE /* User.swift */,
+				515FE29328F63CC100EA3EFE /* UserConfig.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -166,6 +187,7 @@
 				519C63C828F1C60900DBEA34 /* Sources */,
 				519C63C928F1C60900DBEA34 /* Frameworks */,
 				519C63CA28F1C60900DBEA34 /* Resources */,
+				515FE29028F61B8F00EA3EFE /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -178,6 +200,8 @@
 				511C9C2128F51E9D00C86EE5 /* FirebaseAuth */,
 				511C9C2328F51E9D00C86EE5 /* FirebaseFirestore */,
 				511C9C2528F51E9D00C86EE5 /* FirebaseStorage */,
+				515FE28C28F61A4300EA3EFE /* FirebaseCrashlytics */,
+				515FE28E28F61A4300EA3EFE /* FirebasePerformance */,
 			);
 			productName = WeSellGames;
 			productReference = 519C63CC28F1C60900DBEA34 /* WeSellGames.app */;
@@ -233,11 +257,38 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		515FE29028F61B8F00EA3EFE /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${DWARF_DSYM_FOLDER_PATH}/${DWARF_DSYM_FILE_NAME}/Contents/Resources/DWARF/${TARGET_NAME}",
+				"$(SRCROOT)/$(BUILT_PRODUCTS_DIR)/$(INFOPLIST_PATH)",
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n\"${BUILD_DIR%/Build/*}/SourcePackages/checkouts/firebase-ios-sdk/Crashlytics/run\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		519C63C828F1C60900DBEA34 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				515FE29C28F64E4B00EA3EFE /* WelcomeScreen.swift in Sources */,
+				515FE29428F63CC100EA3EFE /* UserConfig.swift in Sources */,
+				515FE29828F6407E00EA3EFE /* SignIn.swift in Sources */,
+				515FE29628F6406C00EA3EFE /* Register.swift in Sources */,
 				519C63D228F1C60900DBEA34 /* ContentView.swift in Sources */,
 				51838ADF28F219A80088A337 /* ProfileView.swift in Sources */,
 				51A200E128F3497800069043 /* Carousel.swift in Sources */,
@@ -246,6 +297,7 @@
 				51838ADD28F218CF0088A337 /* ProfileButton.swift in Sources */,
 				519C63D028F1C60900DBEA34 /* WeSellGamesApp.swift in Sources */,
 				51838AE128F21A550088A337 /* CartManager.swift in Sources */,
+				515FE29228F63A5200EA3EFE /* User.swift in Sources */,
 				51838ACF28F20B7E0088A337 /* Product.swift in Sources */,
 				51838AE328F246A70088A337 /* ProductRow.swift in Sources */,
 				51838AD528F212450088A337 /* MainShopView.swift in Sources */,
@@ -380,10 +432,12 @@
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_ASSET_PATHS = "\"WeSellGames/Preview Content\"";
 				DEVELOPMENT_TEAM = V936C69V6G;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = WeSellGames/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = WeSellGames;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.shopping";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -414,10 +468,12 @@
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_ASSET_PATHS = "\"WeSellGames/Preview Content\"";
 				DEVELOPMENT_TEAM = V936C69V6G;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = WeSellGames/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = WeSellGames;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.shopping";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -507,6 +563,16 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 51A200C128F32DC100069043 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseStorage;
+		};
+		515FE28C28F61A4300EA3EFE /* FirebaseCrashlytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 51A200C128F32DC100069043 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseCrashlytics;
+		};
+		515FE28E28F61A4300EA3EFE /* FirebasePerformance */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 51A200C128F32DC100069043 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebasePerformance;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

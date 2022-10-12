@@ -10,26 +10,38 @@ import SwiftUI
 struct ContentView: View {
     @EnvironmentObject var cartManager: CartManager
     @EnvironmentObject var products: Products
+    @EnvironmentObject var userConfig: UserConfig
+    
+   // @State private var isWelcomeScreenPresented = true
     
     var body: some View {
         NavigationView {
-            MainShopView()
-                .navigationTitle("WeSellGames")
-                .toolbar {
-                    NavigationLink {
-                        ProfileView()
-                    } label: {
-                        ProfileButton()
+            if !userConfig.signedIn {
+                WelcomeScreen()
+                    .environmentObject(userConfig)
+            } else {
+                MainShopView()
+                    .navigationTitle("WeSellGames")
+                    .toolbar {
+                        NavigationLink {
+                            ProfileView()
+                                .environmentObject(userConfig)
+                        } label: {
+                            ProfileButton()
+                        }
+                        NavigationLink {
+                            CartView()
+                                .environmentObject(cartManager)
+                        } label: {
+                            CartButton(numberOfProduct: cartManager.products.count)
+                        }
                     }
-                    NavigationLink {
-                        CartView()
-                            .environmentObject(cartManager)
-                    } label: {
-                        CartButton(numberOfProduct: cartManager.products.count)
-                    }
-                }
+            }
         }
-        .onAppear { products.getData() }
+        .onAppear {
+            products.getData()
+            userConfig.signedIn = userConfig.isSignedIn
+        }
     }
 }
 

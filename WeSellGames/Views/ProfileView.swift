@@ -8,12 +8,22 @@
 import SwiftUI
 
 struct ProfileView: View {
+    @EnvironmentObject var userConfig: UserConfig
+    
     var body: some View {
-        ScrollView {
-                Text("Your profile is empty")
+        VStack {
+            Text("Profile is Empty")
+            
+            Button {
+                userConfig.signOut()
+            } label: {
+                Text("Sign out")
+                    .padding()
+                    .foregroundColor(.red)
+            }
         }
         .navigationTitle("My Profile")
-        .padding(.top)
+        .padding()
     }
 }
 

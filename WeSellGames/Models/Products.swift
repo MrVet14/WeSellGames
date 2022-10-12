@@ -18,7 +18,7 @@ class Products: ObservableObject {
     func getData() {
         let db = Firestore.firestore()
         
-        db.collection("GamesForSale").getDocuments { snapshot, error in
+        db.collection("GamesForSale").getDocuments { [weak self] snapshot, error in
             //Check for errors
             if error == nil {
                 //No errors here
@@ -29,14 +29,14 @@ class Products: ObservableObject {
                         for d in snapshot.documents {
                             let ldImg = d["landImages"] as? String ?? ""
 
-                            self.productList += [Product(name: d["name"] as? String ?? "",
+                            self?.productList += [Product(name: d["name"] as? String ?? "",
                                                     image: d["image"] as? String ?? "",
                                                     landImages: ldImg.components(separatedBy: "\\"),
                                                     description: d["description"] as? String ?? "",
                                                     price: d["price"] as? Double ?? 0)]
                         }
                         DispatchQueue.global(qos: .userInteractive).async {
-                            self.getPhotos()
+                            self?.getPhotos()
                         }
                     }
                 }
@@ -62,10 +62,10 @@ class Products: ObservableObject {
             //specifying the path
             let fileRef = storageRef.child(path)
             //Retrieving Data
-            fileRef.downloadURL { url, error in
+            fileRef.downloadURL { [weak self] url, error in
                 if error == nil && url != nil {
                     DispatchQueue.main.async {
-                        self.retrievedProductImages[path.replacingOccurrences(of: "images/", with: "").replacingOccurrences(of: ".jpg", with: "")] = url
+                        self?.retrievedProductImages[path.replacingOccurrences(of: "images/", with: "").replacingOccurrences(of: ".jpg", with: "")] = url
                     }
                 }
             }

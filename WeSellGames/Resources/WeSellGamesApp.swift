@@ -25,12 +25,14 @@ struct WeSellGamesApp: App {
     
     @StateObject var cartManager = CartManager()
     @StateObject var products = Products()
+    @StateObject var userConfig = UserConfig()
     
     var body: some Scene {
         WindowGroup {
             ContentView()
                 .environmentObject(cartManager)
                 .environmentObject(products)
+                .environmentObject(userConfig)
         }
     }
 }
