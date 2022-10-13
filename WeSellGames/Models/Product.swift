@@ -14,4 +14,5 @@ struct Product: Identifiable {
     var landImages: [String]
     var description: String
     var price: Double
+    var quantity = 0
 }

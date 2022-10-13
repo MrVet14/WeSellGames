@@ -10,25 +10,35 @@ import SwiftUI
 struct CartView: View {
     @EnvironmentObject var cartManager: CartManager
     var body: some View {
-        ScrollView {
+        VStack {
             if cartManager.products.count != 0 {
-                ForEach(cartManager.products, id: \.id) { product in
-                    ProductRow(product: product)
+                ScrollView {
+                    ForEach(cartManager.products, id: \.id) { product in
+                        ProductRow(product: product)
+                    }
                 }
                 
-                HStack {
-                    Text("Your cart total is:")
-                    Spacer()
-                    Text("\(cartManager.total.formatted(.currency(code: "USD")))")
-                        .bold()
+                Divider()
+                
+                VStack {
+                    HStack {
+                        Text("Your cart total is:")
+                        Spacer()
+                        Text("\(cartManager.total.formatted(.currency(code: "USD")))")
+                            .bold()
+                    }
+                    
+                    CheckOutButton()
+                        .environmentObject(cartManager)
                 }
-                .padding()
             } else {
-                Text("Your cart is empty")
+                Text("Your cart is empty\nTry adding something, It's Fun")
+                    .font(.title)
+                    .multilineTextAlignment(.center)
             }
         }
+        .padding()
         .navigationTitle("My Cart")
-        .padding(.top)
     }
 }
 

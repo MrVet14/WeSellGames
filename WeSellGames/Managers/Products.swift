@@ -12,7 +12,7 @@ import FirebaseFirestore
 import FirebaseStorage
 
 class Products: ObservableObject {
-    @Published private(set) var productList = [Product]()
+    @Published var productList = [Product]()
     @Published var retrievedProductImages = [String: URL]()
     
     func getData() {

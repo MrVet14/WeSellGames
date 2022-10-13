@@ -29,6 +29,25 @@ struct ProductRow: View {
             }
             
             Spacer()
+            HStack {
+                Button {
+                    cartManager.subtractFromQuantity(product: product)
+                } label: {
+                    Image(systemName: "minus.circle")
+                        .font(.title2)
+                }
+                
+                Text("\(product.quantity)")
+                    .font(.title)
+                
+                Button {
+                    cartManager.addingToQuantity(product: product)
+                } label: {
+                    Image(systemName: "plus.circle")
+                        .font(.title2)
+                }
+            }
+            .padding(.trailing, 30)
             
             Image(systemName: "trash")
                 .foregroundColor(.red)
@@ -36,14 +55,14 @@ struct ProductRow: View {
                     cartManager.removeFormCart(product: product)
                 }
         }
-        .padding(.horizontal)
         .frame(maxWidth: .infinity, alignment: .leading)
     }
 }
 
 struct ProductRow_Previews: PreviewProvider {
     static var previews: some View {
-        ProductRow(product: Product(name: "Surviving Mars", image: "survivingMars", landImages: ["survivingMars-land1", "survivingMars-land2", "survivingMars-land3"], description: "Surviving Mars is a sci-fi city builder all about colonizing Mars and surviving the process.", price: 20.0))
+        ProductRow(product: Product(name: "Surviving Mars", image: "survivingMars", landImages: ["survivingMars-land1", "survivingMars-land2", "survivingMars-land3"], description: "Surviving Mars is a sci-fi city builder all about colonizing Mars and surviving the process.", price: 20.0, quantity: 0))
             .environmentObject(CartManager())
+            .environmentObject(Products())
     }
 }

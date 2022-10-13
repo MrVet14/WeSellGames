@@ -27,7 +27,6 @@
 		51838AD928F217350088A337 /* CartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51838AD828F217350088A337 /* CartView.swift */; };
 		51838ADD28F218CF0088A337 /* ProfileButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51838ADC28F218CF0088A337 /* ProfileButton.swift */; };
 		51838ADF28F219A80088A337 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51838ADE28F219A80088A337 /* ProfileView.swift */; };
-		51838AE128F21A550088A337 /* CartManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51838AE028F21A550088A337 /* CartManager.swift */; };
 		51838AE328F246A70088A337 /* ProductRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51838AE228F246A70088A337 /* ProductRow.swift */; };
 		51838AE828F255FD0088A337 /* ProductCartTappedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51838AE728F255FD0088A337 /* ProductCartTappedView.swift */; };
 		519C63D028F1C60900DBEA34 /* WeSellGamesApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 519C63CF28F1C60900DBEA34 /* WeSellGamesApp.swift */; };
@@ -37,6 +36,11 @@
 		51A200E128F3497800069043 /* Carousel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51A200E028F3497800069043 /* Carousel.swift */; };
 		51A200E328F36C9600069043 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 51A200E228F36C9600069043 /* GoogleService-Info.plist */; };
 		51A200E828F3AD9400069043 /* Products.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51A200E728F3AD9400069043 /* Products.swift */; };
+		51B94E1928F75B9700B267CA /* CartManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51B94E1828F75B9700B267CA /* CartManager.swift */; };
+		51B94E1C28F7981000B267CA /* SignInWithGoogleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51B94E1B28F7981000B267CA /* SignInWithGoogleButton.swift */; };
+		51B94E1E28F798A600B267CA /* CheckOutButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51B94E1D28F798A600B267CA /* CheckOutButton.swift */; };
+		51B94E2228F79D7100B267CA /* CheckOutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51B94E2128F79D7100B267CA /* CheckOutView.swift */; };
+		51B94E2428F7A18500B267CA /* CheckOutRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51B94E2328F7A18500B267CA /* CheckOutRow.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -53,7 +57,6 @@
 		51838AD828F217350088A337 /* CartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartView.swift; sourceTree = "<group>"; };
 		51838ADC28F218CF0088A337 /* ProfileButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileButton.swift; sourceTree = "<group>"; };
 		51838ADE28F219A80088A337 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
-		51838AE028F21A550088A337 /* CartManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartManager.swift; sourceTree = "<group>"; };
 		51838AE228F246A70088A337 /* ProductRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductRow.swift; sourceTree = "<group>"; };
 		51838AE728F255FD0088A337 /* ProductCartTappedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCartTappedView.swift; sourceTree = "<group>"; };
 		519C63CC28F1C60900DBEA34 /* WeSellGames.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeSellGames.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -64,6 +67,11 @@
 		51A200E028F3497800069043 /* Carousel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Carousel.swift; sourceTree = "<group>"; };
 		51A200E228F36C9600069043 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		51A200E728F3AD9400069043 /* Products.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Products.swift; sourceTree = "<group>"; };
+		51B94E1828F75B9700B267CA /* CartManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CartManager.swift; sourceTree = "<group>"; };
+		51B94E1B28F7981000B267CA /* SignInWithGoogleButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInWithGoogleButton.swift; sourceTree = "<group>"; };
+		51B94E1D28F798A600B267CA /* CheckOutButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckOutButton.swift; sourceTree = "<group>"; };
+		51B94E2128F79D7100B267CA /* CheckOutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckOutView.swift; sourceTree = "<group>"; };
+		51B94E2328F7A18500B267CA /* CheckOutRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckOutRow.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +101,9 @@
 				51838ADC28F218CF0088A337 /* ProfileButton.swift */,
 				51838AE228F246A70088A337 /* ProductRow.swift */,
 				51A200E028F3497800069043 /* Carousel.swift */,
+				51B94E1B28F7981000B267CA /* SignInWithGoogleButton.swift */,
+				51B94E1D28F798A600B267CA /* CheckOutButton.swift */,
+				51B94E2328F7A18500B267CA /* CheckOutRow.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -121,9 +132,8 @@
 				519C63D128F1C60900DBEA34 /* ContentView.swift */,
 				519C63DD28F20A7600DBEA34 /* Views */,
 				519C63DE28F20A7C00DBEA34 /* Models */,
+				51B94E1A28F75BA700B267CA /* Managers */,
 				519C63DF28F20A8800DBEA34 /* Resources */,
-				51838AE028F21A550088A337 /* CartManager.swift */,
-				519C63D528F1C60B00DBEA34 /* Preview Content */,
 			);
 			path = WeSellGames;
 			sourceTree = "<group>";
@@ -147,6 +157,7 @@
 				515FE29528F6406C00EA3EFE /* Register.swift */,
 				515FE29728F6407E00EA3EFE /* SignIn.swift */,
 				515FE29B28F64E4B00EA3EFE /* WelcomeScreen.swift */,
+				51B94E2128F79D7100B267CA /* CheckOutView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -155,9 +166,7 @@
 			isa = PBXGroup;
 			children = (
 				51838ACE28F20B7E0088A337 /* Product.swift */,
-				51A200E728F3AD9400069043 /* Products.swift */,
 				515FE29128F63A5200EA3EFE /* User.swift */,
-				515FE29328F63CC100EA3EFE /* UserConfig.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -165,6 +174,7 @@
 		519C63DF28F20A8800DBEA34 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				519C63D528F1C60B00DBEA34 /* Preview Content */,
 				51A200E228F36C9600069043 /* GoogleService-Info.plist */,
 				519C63CF28F1C60900DBEA34 /* WeSellGamesApp.swift */,
 				519C63D328F1C60B00DBEA34 /* Assets.xcassets */,
@@ -177,6 +187,16 @@
 			children = (
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		51B94E1A28F75BA700B267CA /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				51A200E728F3AD9400069043 /* Products.swift */,
+				515FE29328F63CC100EA3EFE /* UserConfig.swift */,
+				51B94E1828F75B9700B267CA /* CartManager.swift */,
+			);
+			path = Managers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -294,19 +314,23 @@
 				515FE29828F6407E00EA3EFE /* SignIn.swift in Sources */,
 				515FE29628F6406C00EA3EFE /* Register.swift in Sources */,
 				519C63D228F1C60900DBEA34 /* ContentView.swift in Sources */,
+				51B94E1928F75B9700B267CA /* CartManager.swift in Sources */,
 				51838ADF28F219A80088A337 /* ProfileView.swift in Sources */,
 				51A200E128F3497800069043 /* Carousel.swift in Sources */,
+				51B94E2428F7A18500B267CA /* CheckOutRow.swift in Sources */,
+				51B94E1C28F7981000B267CA /* SignInWithGoogleButton.swift in Sources */,
 				51A200E828F3AD9400069043 /* Products.swift in Sources */,
 				51838AD928F217350088A337 /* CartView.swift in Sources */,
 				51838ADD28F218CF0088A337 /* ProfileButton.swift in Sources */,
+				51B94E1E28F798A600B267CA /* CheckOutButton.swift in Sources */,
 				519C63D028F1C60900DBEA34 /* WeSellGamesApp.swift in Sources */,
-				51838AE128F21A550088A337 /* CartManager.swift in Sources */,
 				515FE29228F63A5200EA3EFE /* User.swift in Sources */,
 				51838ACF28F20B7E0088A337 /* Product.swift in Sources */,
 				51838AE328F246A70088A337 /* ProductRow.swift in Sources */,
 				51838AD528F212450088A337 /* MainShopView.swift in Sources */,
 				51838AD128F20E480088A337 /* ProductCard.swift in Sources */,
 				51838AE828F255FD0088A337 /* ProductCartTappedView.swift in Sources */,
+				51B94E2228F79D7100B267CA /* CheckOutView.swift in Sources */,
 				51838AD728F214FC0088A337 /* CartButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -437,7 +461,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEVELOPMENT_ASSET_PATHS = "\"WeSellGames/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"WeSellGames/Resources/Preview Content\"";
 				DEVELOPMENT_TEAM = V936C69V6G;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -473,7 +497,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEVELOPMENT_ASSET_PATHS = "\"WeSellGames/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"WeSellGames/Resources/Preview Content\"";
 				DEVELOPMENT_TEAM = V936C69V6G;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
