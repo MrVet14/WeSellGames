@@ -50,7 +50,7 @@ struct CheckOutRow: View {
 
 struct CheckOutRow_Previews: PreviewProvider {
     static var previews: some View {
-        CheckOutRow(product: Product(name: "Surviving Mars", image: "survivingMars", landImages: ["survivingMars-land1", "survivingMars-land2", "survivingMars-land3"], description: "Surviving Mars is a sci-fi city builder all about colonizing Mars and surviving the process.", price: 20.0, quantity: 1))
+        CheckOutRow(product: Product(name: "Surviving Mars", image: "survivingMars", landImages: ["survivingMars-land1", "survivingMars-land2", "survivingMars-land3"], description: "Surviving Mars is a sci-fi city builder all about colonizing Mars and surviving the process.", price: 20.0, quantity: 1, genre: "Simulator"))
             .environmentObject(CartManager())
             .environmentObject(Products())
     }

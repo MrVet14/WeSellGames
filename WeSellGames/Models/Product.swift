@@ -15,4 +15,5 @@ struct Product: Identifiable {
     var description: String
     var price: Double
     var quantity = 0
+    var genre: String
 }

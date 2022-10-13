@@ -31,9 +31,6 @@ struct ContentView: View {
                                 .environmentObject(products)
                         } label: {
                             ProfileButton()
-//                                .onTapGesture {
-//                                    impactLight.impactOccurred()
-//                                }
                         }
                         NavigationLink {
                             CartView()
@@ -43,9 +40,6 @@ struct ContentView: View {
                         } label: {
                             CartButton()
                                 .environmentObject(cartManager)
-//                                .onTapGesture {
-//                                    impactLight.impactOccurred()
-//                                }
                         }
                     }
             }

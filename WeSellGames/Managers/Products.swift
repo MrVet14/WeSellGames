@@ -12,6 +12,7 @@ import FirebaseStorage
 class Products: ObservableObject {
     @Published var productList = [Product]()
     @Published var retrievedProductImages = [String: URL]()
+    @Published var categories = ["All"]
     
     func getData() {
         let db = Firestore.firestore()
@@ -31,7 +32,13 @@ class Products: ObservableObject {
                                                     image: d["image"] as? String ?? "",
                                                     landImages: ldImg.components(separatedBy: "\\"),
                                                     description: d["description"] as? String ?? "",
-                                                    price: d["price"] as? Double ?? 0)]
+                                                    price: d["price"] as? Double ?? 0,
+                                                    genre: d["genre"] as? String ?? "")]
+                        }
+                        for product in self!.productList {
+                            if !(self?.categories.contains(product.genre) ?? true) {
+                                    self?.categories.append(product.genre)
+                            }
                         }
                         DispatchQueue.global(qos: .userInteractive).async {
                             self?.getPhotos()

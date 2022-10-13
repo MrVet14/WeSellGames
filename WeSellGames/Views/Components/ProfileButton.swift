@@ -17,9 +17,9 @@ struct ProfileButton: View {
             .foregroundColor(.white)
             .background(Color(hue: 0.519, saturation: 0.683, brightness: 0.703))
             .cornerRadius(50)
-            .onTapGesture {
-                impactLight.impactOccurred()
-            }
+//            .onTapGesture {
+//                impactLight.impactOccurred()
+//            }
     }
 }
 

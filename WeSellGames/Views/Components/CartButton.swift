@@ -36,9 +36,9 @@ struct CartButton: View {
                     .cornerRadius(20)
             }
         }
-        .onTapGesture {
-            impactLight.impactOccurred()
-        }
+//        .onTapGesture {
+//            impactLight.impactOccurred()
+//        }
     }
 }
 
