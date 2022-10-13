@@ -14,12 +14,25 @@ import GoogleSignInSwift
 
 class UserConfig: ObservableObject {
     let auth = Auth.auth()
-    
+    @Published var isAnonymous = false
     @Published var signedIn = false
     @Published var user = User(email: "")
     
     var isSignedIn: Bool {
         return auth.currentUser != nil
+    }
+    
+    func anonymousAcc() {
+        auth.signInAnonymously { [weak self] result, error in
+            if error == nil {
+                DispatchQueue.main.async {
+                    self?.signedIn = true
+                    self?.isAnonymous = true
+                }
+            } else {
+                print(error?.localizedDescription ?? "")
+            }
+        }
     }
     
     func singIn(_ email: String, _ password: String) {
@@ -28,6 +41,7 @@ class UserConfig: ObservableObject {
                 DispatchQueue.main.async {
                     self?.user.email = email
                     self?.signedIn = true
+                    self?.isAnonymous = false
                 }
             } else {
                 print(error?.localizedDescription ?? "")
@@ -41,6 +55,7 @@ class UserConfig: ObservableObject {
                 DispatchQueue.main.async {
                     self?.user.email = email
                     self?.signedIn = true
+                    self?.isAnonymous = false
                 }
             } else {
                 print(error?.localizedDescription ?? "")

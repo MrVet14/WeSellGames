@@ -10,6 +10,8 @@ import SwiftUI
 struct WelcomeScreen: View {
     @EnvironmentObject var userConfig: UserConfig
     
+    let impactLight = UIImpactFeedbackGenerator(style: .light)
+    
     var body: some View {
         NavigationView {
             ZStack {
@@ -45,6 +47,9 @@ struct WelcomeScreen: View {
                                     .frame(width: 150)
                                     .background(Color(hue: 0.519, saturation: 0.683, brightness: 0.703))
                                     .cornerRadius(10)
+//                                    .onTapGesture {
+//                                        impactLight.impactOccurred()
+//                                    }
                             }
                             
                             Text("OR")
@@ -61,7 +66,19 @@ struct WelcomeScreen: View {
                                     .frame(width: 150)
                                     .background(Color(hue: 0.519, saturation: 0.683, brightness: 0.703))
                                     .cornerRadius(10)
+//                                    .onTapGesture {
+//                                        impactLight.impactOccurred()
+//                                    }
                             }
+                        }
+                        
+                        Button {
+                            impactLight.impactOccurred()
+                            userConfig.anonymousAcc()
+                        } label: {
+                            Text("Continue as a guest")
+                                .foregroundColor(.secondary)
+                                .padding(.vertical, 5)
                         }
                         
     //                    Text("Also you can")

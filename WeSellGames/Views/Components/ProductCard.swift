@@ -14,6 +14,9 @@ struct ProductCard: View {
     var product: Product
     @State private var showingSheet = false
     
+    let impactMedium = UIImpactFeedbackGenerator(style: .medium)
+    let hapticSelection = UISelectionFeedbackGenerator()
+    
     var body: some View {
         ZStack(alignment: .topTrailing) {
             ZStack(alignment: .bottom) {
@@ -26,6 +29,7 @@ struct ProductCard: View {
                 VStack(alignment: .leading) {
                     Text(product.name)
                         .bold()
+                        .lineLimit(2)
                     
                     Text("\(product.price.formatted(.currency(code: "USD")))")
                         .font(.caption)
@@ -38,13 +42,15 @@ struct ProductCard: View {
             .frame(width: 180, height: 250)
             .shadow(radius: 4)
             .onTapGesture {
+                hapticSelection.selectionChanged()
                 showingSheet.toggle()
             }
-            .sheet(isPresented: $showingSheet) {
+            .sheet(isPresented: $showingSheet, onDismiss: { hapticSelection.selectionChanged() }) {
                 ProductCartTappedView(product: product)
             }
             
             Button {
+                impactMedium.impactOccurred()
                 cartManager.addToCart(product: product)
             } label: {
                 Image(systemName: "plus")

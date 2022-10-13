@@ -13,6 +13,9 @@ struct ProductRow: View {
     @EnvironmentObject var cartManager: CartManager
     var product: Product
     
+    let impactLight = UIImpactFeedbackGenerator(style: .light)
+    let impactHeavy = UIImpactFeedbackGenerator(style: .heavy)
+    
     var body: some View {
         HStack(spacing: 20) {
             WebImage(url: products.retrievedProductImages["\(product.image)"])
@@ -24,6 +27,7 @@ struct ProductRow: View {
             VStack(alignment: .leading, spacing: 10) {
                 Text(product.name)
                     .bold()
+                    .lineLimit(2)
                 
                 Text("\(product.price.formatted(.currency(code: "USD")))")
             }
@@ -31,6 +35,7 @@ struct ProductRow: View {
             Spacer()
             HStack {
                 Button {
+                    impactLight.impactOccurred()
                     cartManager.subtractFromQuantity(product: product)
                 } label: {
                     Image(systemName: "minus.circle")
@@ -38,24 +43,30 @@ struct ProductRow: View {
                 }
                 
                 Text("\(product.quantity)")
-                    .font(.title)
+                    .font(.title2)
                 
                 Button {
+                    impactLight.impactOccurred()
                     cartManager.addingToQuantity(product: product)
                 } label: {
                     Image(systemName: "plus.circle")
                         .font(.title2)
                 }
             }
-            .padding(.trailing, 30)
+            .padding(.trailing, 10)
             
             Image(systemName: "trash")
                 .foregroundColor(.red)
+                .font(.title2)
                 .onTapGesture {
+                    impactHeavy.impactOccurred()
                     cartManager.removeFormCart(product: product)
                 }
         }
         .frame(maxWidth: .infinity, alignment: .leading)
+        .padding()
+        .background(.ultraThinMaterial)
+        .cornerRadius(20)
     }
 }
 

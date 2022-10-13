@@ -14,6 +14,8 @@ struct OrderDetailView: View {
     @State private var showAlert = false
     var order: Order
     
+    let haptic = UINotificationFeedbackGenerator()
+    
     var body: some View {
         VStack {
             ScrollView {
@@ -30,8 +32,13 @@ struct OrderDetailView: View {
                         .font(.title3)
                         .foregroundColor(.red)
                 }
+                .padding()
+                .padding(.horizontal, 20)
+                .background(.ultraThinMaterial)
+                .cornerRadius(20)
                 .alert("You sure you wanna cancel your order?", isPresented: $showAlert) {
                     Button("Yes", role: .destructive) {
+                        haptic.notificationOccurred(.success)
                         orders.deleteData(order: order)
                         self.presentationMode.wrappedValue.dismiss()
                     }

@@ -11,6 +11,8 @@ struct ProductCartTappedView: View {
     @EnvironmentObject var cartManager: CartManager
     var product: Product
     
+    let impactMedium = UIImpactFeedbackGenerator(style: .medium)
+    
     var body: some View {
         ScrollView {
             VStack(alignment: .leading) {
@@ -30,6 +32,7 @@ struct ProductCartTappedView: View {
                     Spacer()
                     
                     Button {
+                        impactMedium.impactOccurred()
                         cartManager.addToCart(product: product)
                     } label: {
                         Text("Add to cart")

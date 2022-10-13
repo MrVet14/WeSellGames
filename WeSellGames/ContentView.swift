@@ -13,7 +13,7 @@ struct ContentView: View {
     @EnvironmentObject var userConfig: UserConfig
     @EnvironmentObject var orders: Orders
     
-   // @State private var isWelcomeScreenPresented = true
+    let impactLight = UIImpactFeedbackGenerator(style: .light)
     
     var body: some View {
         NavigationView {
@@ -31,13 +31,21 @@ struct ContentView: View {
                                 .environmentObject(products)
                         } label: {
                             ProfileButton()
+//                                .onTapGesture {
+//                                    impactLight.impactOccurred()
+//                                }
                         }
                         NavigationLink {
                             CartView()
                                 .environmentObject(cartManager)
                                 .environmentObject(orders)
+                                .environmentObject(userConfig)
                         } label: {
-                            CartButton(numberOfProduct: cartManager.products.count)
+                            CartButton()
+                                .environmentObject(cartManager)
+//                                .onTapGesture {
+//                                    impactLight.impactOccurred()
+//                                }
                         }
                     }
             }

@@ -8,9 +8,12 @@
 import SwiftUI
 
 struct SignIn: View {
+    @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
     @EnvironmentObject var userConfig: UserConfig
     @State private var email: String = ""
     @State private var password: String = ""
+    
+    let haptic = UINotificationFeedbackGenerator()
     
     var body: some View {
         ZStack {
@@ -31,6 +34,7 @@ struct SignIn: View {
                         .padding()
                         .background(.ultraThinMaterial)
                         .cornerRadius(10)
+                        .keyboardType(.emailAddress)
                     
                     SecureField("Password", text: $password)
                         .autocorrectionDisabled()
@@ -41,7 +45,11 @@ struct SignIn: View {
                     
                     Button {
                         if !email.isEmpty && !password.isEmpty {
+                            haptic.notificationOccurred(.success)
                             userConfig.singIn(email, password)
+                            if userConfig.isAnonymous {
+                                self.presentationMode.wrappedValue.dismiss()
+                            }
                         }
                     } label: {
                         Text("Sign in")

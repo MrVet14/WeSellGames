@@ -10,6 +10,7 @@ import SwiftUI
 struct CartView: View {
     @EnvironmentObject var cartManager: CartManager
     @EnvironmentObject var orders: Orders
+    @EnvironmentObject var userConfig: UserConfig
     
     var body: some View {
         VStack {
@@ -30,9 +31,14 @@ struct CartView: View {
                             .bold()
                     }
                     
-                    CheckOutButton()
-                        .environmentObject(cartManager)
-                        .environmentObject(orders)
+                    NavigationLink {
+                        CheckOutView()
+                            .environmentObject(cartManager)
+                            .environmentObject(orders)
+                            .environmentObject(userConfig)
+                    } label: {
+                        CheckOutButton()
+                    }
                 }
             } else {
                 Text("Your cart is empty\nTry adding something, It's Fun")
@@ -45,10 +51,12 @@ struct CartView: View {
     }
 }
 
+
 struct CartView_Previews: PreviewProvider {
     static var previews: some View {
         CartView()
             .environmentObject(CartManager())
             .environmentObject(Orders())
+            .environmentObject(UserConfig())
     }
 }
