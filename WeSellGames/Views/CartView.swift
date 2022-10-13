@@ -36,7 +36,7 @@ struct CartView: View {
                 }
             } else {
                 Text("Your cart is empty\nTry adding something, It's Fun")
-                    .font(.title)
+                    .font(.title2)
                     .multilineTextAlignment(.center)
             }
         }
