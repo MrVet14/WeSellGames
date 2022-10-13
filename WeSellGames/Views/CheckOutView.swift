@@ -9,6 +9,7 @@ import SwiftUI
 
 struct CheckOutView: View {
     @EnvironmentObject var cartManager: CartManager
+    @EnvironmentObject var orders: Orders
     @State private var email: String = ""
     @Binding var checkOutViewOpen: Bool
     
@@ -48,6 +49,7 @@ struct CheckOutView: View {
                 }
                 
                 Button {
+                    orders.addData(email: email, order: cartManager.products, total: cartManager.total)
                     cartManager.products.removeAll()
                     checkOutViewOpen.toggle()
                 } label: {
@@ -70,5 +72,6 @@ struct CheckOutView: View {
 //    static var previews: some View {
 //        CheckOutView(checkOutViewOpen: true)
 //            .environmentObject(CartManager())
+//            .environmentObject(Orders())
 //    }
 //}

@@ -9,6 +9,8 @@ import SwiftUI
 
 struct CartView: View {
     @EnvironmentObject var cartManager: CartManager
+    @EnvironmentObject var orders: Orders
+    
     var body: some View {
         VStack {
             if cartManager.products.count != 0 {
@@ -30,6 +32,7 @@ struct CartView: View {
                     
                     CheckOutButton()
                         .environmentObject(cartManager)
+                        .environmentObject(orders)
                 }
             } else {
                 Text("Your cart is empty\nTry adding something, It's Fun")
@@ -46,5 +49,6 @@ struct CartView_Previews: PreviewProvider {
     static var previews: some View {
         CartView()
             .environmentObject(CartManager())
+            .environmentObject(Orders())
     }
 }

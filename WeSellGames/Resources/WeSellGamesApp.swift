@@ -33,6 +33,7 @@ struct WeSellGamesApp: App {
     @StateObject var cartManager = CartManager()
     @StateObject var products = Products()
     @StateObject var userConfig = UserConfig()
+    @StateObject var orders = Orders()
     
     var body: some Scene {
         WindowGroup {
@@ -40,6 +41,7 @@ struct WeSellGamesApp: App {
                 .environmentObject(cartManager)
                 .environmentObject(products)
                 .environmentObject(userConfig)
+                .environmentObject(orders)
         }
     }
 }

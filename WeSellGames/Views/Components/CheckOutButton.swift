@@ -9,6 +9,7 @@ import SwiftUI
 
 struct CheckOutButton: View {
     @EnvironmentObject var cartManager: CartManager
+    @EnvironmentObject var orders: Orders
     @State private var isShowingCheckOutScreen = false
     
     var body: some View {
@@ -27,6 +28,7 @@ struct CheckOutButton: View {
             .sheet(isPresented: $isShowingCheckOutScreen) {
                 CheckOutView(checkOutViewOpen: $isShowingCheckOutScreen)
                     .environmentObject(cartManager)
+                    .environmentObject(orders)
             }
     }
 }
@@ -35,5 +37,6 @@ struct CheckOutButton_Previews: PreviewProvider {
     static var previews: some View {
         CheckOutButton()
             .environmentObject(CartManager())
+            .environmentObject(Orders())
     }
 }

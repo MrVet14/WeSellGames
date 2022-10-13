@@ -6,9 +6,7 @@
 //
 
 import Foundation
-import SwiftUI
 import Firebase
-import FirebaseFirestore
 import FirebaseStorage
 
 class Products: ObservableObject {

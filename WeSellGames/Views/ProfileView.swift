@@ -8,8 +8,9 @@
 import SwiftUI
 
 struct ProfileView: View {
+    @EnvironmentObject var products: Products
     @EnvironmentObject var userConfig: UserConfig
-    @State private var showingDeleteAlert = false
+    @EnvironmentObject var orders: Orders
     @State private var password = ""
     
     var body: some View {
@@ -27,6 +28,26 @@ struct ProfileView: View {
             .background(.ultraThinMaterial)
             .cornerRadius(10)
             
+            NavigationLink {
+                OrdersView()
+                    .environmentObject(products)
+                    .environmentObject(orders)
+            } label: {
+                HStack {
+                    Text("Orders")
+                        .font(.title2)
+                        .foregroundColor(.primary)
+                    Spacer()
+                    Image(systemName: "chevron.right")
+                        .foregroundColor(.primary)
+                        .padding(.trailing)
+                }
+            }
+            .padding()
+            .frame(maxWidth: .infinity)
+            .background(.ultraThinMaterial)
+            .cornerRadius(10)
+            
             VStack(spacing: 10) {
                 Button {
                     userConfig.signOut()
@@ -35,23 +56,11 @@ struct ProfileView: View {
                         .foregroundColor(.red)
                 }
                 Button {
-                    //showingDeleteAlert.toggle()
                     userConfig.deleteAcc()
-                    
                 } label: {
                     Text("Delete account")
                         .foregroundColor(.red)
-                } //Alert works only on IOS16
-//                .alert("Delete Account", isPresented: $showingDeleteAlert, actions: {
-//                    SecureField("Password", text: $password)
-//
-//                    Button("Delete Account", role: .destructive, action: {  userConfig.deleteAcc(password) })
-//                    Button("Cancel", role: .cancel, action: {})
-//                }, message: {
-//                    Text("Please, enter your password to confirm action")
-//                })
-                
-
+                }
             }
             .frame(maxHeight: .infinity, alignment: .bottom)
         }
@@ -64,7 +73,7 @@ struct ProfileView_Previews: PreviewProvider {
     static var previews: some View {
         ProfileView()
             .environmentObject(UserConfig())
+            .environmentObject(Products())
+            .environmentObject(Orders())
     }
 }
-
-

@@ -11,6 +11,7 @@ struct ContentView: View {
     @EnvironmentObject var cartManager: CartManager
     @EnvironmentObject var products: Products
     @EnvironmentObject var userConfig: UserConfig
+    @EnvironmentObject var orders: Orders
     
    // @State private var isWelcomeScreenPresented = true
     
@@ -26,12 +27,15 @@ struct ContentView: View {
                         NavigationLink {
                             ProfileView()
                                 .environmentObject(userConfig)
+                                .environmentObject(orders)
+                                .environmentObject(products)
                         } label: {
                             ProfileButton()
                         }
                         NavigationLink {
                             CartView()
                                 .environmentObject(cartManager)
+                                .environmentObject(orders)
                         } label: {
                             CartButton(numberOfProduct: cartManager.products.count)
                         }
@@ -39,9 +43,10 @@ struct ContentView: View {
             }
         }
         .onAppear {
-            products.getData()
             userConfig.signedIn = userConfig.isSignedIn
             userConfig.getUserData()
+            products.getData()
+            orders.getData()
         }
     }
 }
@@ -50,5 +55,8 @@ struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
             .environmentObject(CartManager())
+            .environmentObject(Products())
+            .environmentObject(UserConfig())
+            .environmentObject(Orders())
     }
 }

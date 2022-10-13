@@ -41,6 +41,12 @@
 		51B94E1E28F798A600B267CA /* CheckOutButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51B94E1D28F798A600B267CA /* CheckOutButton.swift */; };
 		51B94E2228F79D7100B267CA /* CheckOutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51B94E2128F79D7100B267CA /* CheckOutView.swift */; };
 		51B94E2428F7A18500B267CA /* CheckOutRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51B94E2328F7A18500B267CA /* CheckOutRow.swift */; };
+		51B94E2628F7B02E00B267CA /* Orders.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51B94E2528F7B02E00B267CA /* Orders.swift */; };
+		51B94E2828F7B06100B267CA /* Order.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51B94E2728F7B06100B267CA /* Order.swift */; };
+		51B94E2A28F7C99B00B267CA /* OrdersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51B94E2928F7C99B00B267CA /* OrdersView.swift */; };
+		51B94E2C28F7C9BA00B267CA /* DetailOrdersRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51B94E2B28F7C9BA00B267CA /* DetailOrdersRow.swift */; };
+		51B94E2E28F7CCB100B267CA /* OrderDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51B94E2D28F7CCB100B267CA /* OrderDetailView.swift */; };
+		51B94E3028F7D55700B267CA /* OrderRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51B94E2F28F7D55700B267CA /* OrderRow.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -72,6 +78,12 @@
 		51B94E1D28F798A600B267CA /* CheckOutButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckOutButton.swift; sourceTree = "<group>"; };
 		51B94E2128F79D7100B267CA /* CheckOutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckOutView.swift; sourceTree = "<group>"; };
 		51B94E2328F7A18500B267CA /* CheckOutRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckOutRow.swift; sourceTree = "<group>"; };
+		51B94E2528F7B02E00B267CA /* Orders.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Orders.swift; sourceTree = "<group>"; };
+		51B94E2728F7B06100B267CA /* Order.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Order.swift; sourceTree = "<group>"; };
+		51B94E2928F7C99B00B267CA /* OrdersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrdersView.swift; sourceTree = "<group>"; };
+		51B94E2B28F7C9BA00B267CA /* DetailOrdersRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailOrdersRow.swift; sourceTree = "<group>"; };
+		51B94E2D28F7CCB100B267CA /* OrderDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderDetailView.swift; sourceTree = "<group>"; };
+		51B94E2F28F7D55700B267CA /* OrderRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderRow.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +116,8 @@
 				51B94E1B28F7981000B267CA /* SignInWithGoogleButton.swift */,
 				51B94E1D28F798A600B267CA /* CheckOutButton.swift */,
 				51B94E2328F7A18500B267CA /* CheckOutRow.swift */,
+				51B94E2F28F7D55700B267CA /* OrderRow.swift */,
+				51B94E2B28F7C9BA00B267CA /* DetailOrdersRow.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -158,6 +172,8 @@
 				515FE29728F6407E00EA3EFE /* SignIn.swift */,
 				515FE29B28F64E4B00EA3EFE /* WelcomeScreen.swift */,
 				51B94E2128F79D7100B267CA /* CheckOutView.swift */,
+				51B94E2928F7C99B00B267CA /* OrdersView.swift */,
+				51B94E2D28F7CCB100B267CA /* OrderDetailView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -167,6 +183,7 @@
 			children = (
 				51838ACE28F20B7E0088A337 /* Product.swift */,
 				515FE29128F63A5200EA3EFE /* User.swift */,
+				51B94E2728F7B06100B267CA /* Order.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -195,6 +212,7 @@
 				51A200E728F3AD9400069043 /* Products.swift */,
 				515FE29328F63CC100EA3EFE /* UserConfig.swift */,
 				51B94E1828F75B9700B267CA /* CartManager.swift */,
+				51B94E2528F7B02E00B267CA /* Orders.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -312,14 +330,18 @@
 				515FE29C28F64E4B00EA3EFE /* WelcomeScreen.swift in Sources */,
 				515FE29428F63CC100EA3EFE /* UserConfig.swift in Sources */,
 				515FE29828F6407E00EA3EFE /* SignIn.swift in Sources */,
+				51B94E2C28F7C9BA00B267CA /* DetailOrdersRow.swift in Sources */,
 				515FE29628F6406C00EA3EFE /* Register.swift in Sources */,
 				519C63D228F1C60900DBEA34 /* ContentView.swift in Sources */,
 				51B94E1928F75B9700B267CA /* CartManager.swift in Sources */,
+				51B94E2628F7B02E00B267CA /* Orders.swift in Sources */,
 				51838ADF28F219A80088A337 /* ProfileView.swift in Sources */,
 				51A200E128F3497800069043 /* Carousel.swift in Sources */,
 				51B94E2428F7A18500B267CA /* CheckOutRow.swift in Sources */,
 				51B94E1C28F7981000B267CA /* SignInWithGoogleButton.swift in Sources */,
 				51A200E828F3AD9400069043 /* Products.swift in Sources */,
+				51B94E3028F7D55700B267CA /* OrderRow.swift in Sources */,
+				51B94E2828F7B06100B267CA /* Order.swift in Sources */,
 				51838AD928F217350088A337 /* CartView.swift in Sources */,
 				51838ADD28F218CF0088A337 /* ProfileButton.swift in Sources */,
 				51B94E1E28F798A600B267CA /* CheckOutButton.swift in Sources */,
@@ -328,9 +350,11 @@
 				51838ACF28F20B7E0088A337 /* Product.swift in Sources */,
 				51838AE328F246A70088A337 /* ProductRow.swift in Sources */,
 				51838AD528F212450088A337 /* MainShopView.swift in Sources */,
+				51B94E2A28F7C99B00B267CA /* OrdersView.swift in Sources */,
 				51838AD128F20E480088A337 /* ProductCard.swift in Sources */,
 				51838AE828F255FD0088A337 /* ProductCartTappedView.swift in Sources */,
 				51B94E2228F79D7100B267CA /* CheckOutView.swift in Sources */,
+				51B94E2E28F7CCB100B267CA /* OrderDetailView.swift in Sources */,
 				51838AD728F214FC0088A337 /* CartButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
