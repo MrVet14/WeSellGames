@@ -32,7 +32,7 @@ struct MainShopView: View {
     
     var body: some View {
         VStack {
-            ScrollView(.horizontal) {
+            ScrollView(.horizontal, showsIndicators: false) {
                 HStack {
                     ForEach(products.categories, id: \.self) { category in
                         Button {
