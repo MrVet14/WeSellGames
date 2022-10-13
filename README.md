@@ -5,7 +5,7 @@ An E-Comerce proof of concept app built with SwiftUI and Firebase.
 
 ## Screenshots
 
-![App Screenshot](/../<screenshots>/Screenshots/1.jpeg?raw=true "Welcome Screen")
+![App Screenshot](/../<screenshots>/path/to/Screenshots/1.jpeg?raw=true "Welcome Screen")
 ![App Screenshot](/../<screenshots>/Screenshots/2.jpeg?raw=true "Sign IN")
 ![App Screenshot](/../<screenshots>/Screenshots/3.jpeg?raw=true "Main View")
 ![App Screenshot](/../<screenshots>/Screenshots/4.jpeg?raw=true "Filtered Main View")
