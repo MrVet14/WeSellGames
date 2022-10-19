@@ -40,6 +40,19 @@ struct CartView: View {
                         CheckOutButton()
                     }
                 }
+                .toolbar {
+                    Button {
+                        cartManager.removeCart()
+                    } label: {
+                        Text("Remove all")
+                            .font(.title2)
+                            .foregroundColor(.primary)
+                            .padding(.vertical, 3)
+                            .padding(.horizontal)
+                            .background(.red)
+                            .cornerRadius(20)
+                    }
+                }
             } else {
                 Text("Your cart is empty\nTry adding something, It's Fun")
                     .font(.title2)
