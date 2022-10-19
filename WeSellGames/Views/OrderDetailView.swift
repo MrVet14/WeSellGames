@@ -30,7 +30,7 @@ struct OrderDetailView: View {
                 }
                 .frame(maxWidth: .infinity, alignment: .leading)
                 .padding()
-                .background(.ultraThinMaterial)
+                .background(.thinMaterial)
                 .cornerRadius(20)
                 
                 ForEach(order.orderedProducts, id: \.id) { item in

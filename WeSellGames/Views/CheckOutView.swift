@@ -52,7 +52,7 @@ struct CheckOutView: View {
                     Button {
                         haptic.notificationOccurred(.success)
                         orders.addData(email: email, order: cartManager.products, total: cartManager.total)
-                        cartManager.products.removeAll()
+                        cartManager.cartHasBeenCheckedOut()
                         self.presentationMode.wrappedValue.dismiss()
                     } label: {
                             Text("Confirm")

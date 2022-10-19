@@ -15,6 +15,7 @@ struct OrderRow: View {
             Text("Order #. \(order.id)")
                 .foregroundColor(.primary)
                 .multilineTextAlignment(.leading)
+                .lineLimit(2)
             
             Spacer()
             

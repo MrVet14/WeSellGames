@@ -67,4 +67,9 @@ class CartManager: ObservableObject {
             }
         }
     }
+    
+    func cartHasBeenCheckedOut() {
+        self.products.removeAll()
+        self.total = 0
+    }
 }

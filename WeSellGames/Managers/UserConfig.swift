@@ -45,6 +45,8 @@ class UserConfig: ObservableObject {
                     self?.signedIn = true
                     self?.isAnonymous = false
                 }
+                //Updating orders
+                Orders().getData()
             } else {
                 print(error?.localizedDescription ?? "")
             }
@@ -63,6 +65,8 @@ class UserConfig: ObservableObject {
                 //Create new database entry for new user
                 let db = Firestore.firestore()
                 db.collection("Users").document(result?.user.uid ?? "").setData(["email" : email])
+                //Updating orders
+                Orders().getData()
             } else {
                 print(error?.localizedDescription ?? "")
             }
@@ -167,19 +171,4 @@ class UserConfig: ObservableObject {
 //        
 //        return root
 //    }
-//}
-
-// Code for updating credentials in order to delete acc
-
-//let user = Auth.auth().currentUser
-//var credential: AuthCredential
-//
-//// Prompt the user to re-provide their sign-in credentials
-//
-//user?.reauthenticate(with: credential) { error in
-//  if let error = error {
-//    // An error happened.
-//  } else {
-//    // User re-authenticated.
-//  }
 //}
