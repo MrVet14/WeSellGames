@@ -19,6 +19,20 @@ struct OrderDetailView: View {
     var body: some View {
         VStack {
             ScrollView {
+                VStack(alignment: .leading) {
+                    Text("Order was delivered to this email")
+                        .font(.title2)
+                    
+                    Divider()
+                    
+                    Text(order.email)
+                        .font(.title3).bold()
+                }
+                .frame(maxWidth: .infinity, alignment: .leading)
+                .padding()
+                .background(.ultraThinMaterial)
+                .cornerRadius(20)
+                
                 ForEach(order.orderedProducts, id: \.id) { item in
                     DetailOrdersRow(order: item)
                 }

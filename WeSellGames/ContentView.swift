@@ -18,7 +18,7 @@ struct ContentView: View {
     var body: some View {
         NavigationView {
             if !userConfig.signedIn {
-                WelcomeScreen()
+                WelcomeScreenView()
                     .environmentObject(userConfig)
             } else {
                 MainShopView()

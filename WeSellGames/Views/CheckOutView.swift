@@ -66,45 +66,8 @@ struct CheckOutView: View {
                         .cornerRadius(20)
                 }
             } else {
-                Text("To continue you have to:")
-                    .font(.title2)
-                
-                HStack {
-                    NavigationLink {
-                        Register()
-                            .environmentObject(userConfig)
-                    } label: {
-                        Text("Register")
-                            .font(.title3)
-                            .padding()
-                            .foregroundColor(.white)
-                            .frame(width: 150)
-                            .background(Color(hue: 0.519, saturation: 0.683, brightness: 0.703))
-                            .cornerRadius(10)
-                            .onTapGesture {
-                                impactLight.impactOccurred()
-                            }
-                    }
-                    
-                    Text("OR")
-                        .padding(5)
-                    
-                    NavigationLink {
-                        SignIn()
-                            .environmentObject(userConfig)
-                    } label: {
-                        Text("Sign in")
-                            .font(.title3)
-                            .padding()
-                            .foregroundColor(.white)
-                            .frame(width: 150)
-                            .background(Color(hue: 0.519, saturation: 0.683, brightness: 0.703))
-                            .cornerRadius(10)
-                            .onTapGesture {
-                                impactLight.impactOccurred()
-                            }
-                    }
-                }
+                SignInOrRegisterComponent()
+                    .environmentObject(userConfig)
             }
         }
         .padding()

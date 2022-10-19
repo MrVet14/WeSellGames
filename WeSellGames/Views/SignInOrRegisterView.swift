@@ -1,15 +1,16 @@
 //
-//  SignIn.swift
+//  SignInOrRegisterView.swift
 //  WeSellGames
 //
-//  Created by Vitali Vyucheiski on 10/12/22.
+//  Created by Vitali Vyucheiski on 10/19/22.
 //
 
 import SwiftUI
 
-struct SignIn: View {
+struct SignInOrRegisterView: View {
     @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
     @EnvironmentObject var userConfig: UserConfig
+    @State var isSignInViewPresented: Bool
     @State private var email: String = ""
     @State private var password: String = ""
     
@@ -46,13 +47,17 @@ struct SignIn: View {
                     Button {
                         if !email.isEmpty && !password.isEmpty {
                             haptic.notificationOccurred(.success)
-                            userConfig.singIn(email, password)
+                            if isSignInViewPresented {
+                                userConfig.singIn(email, password)
+                            } else {
+                                userConfig.register(email, password)
+                            }
                             if userConfig.isAnonymous {
                                 self.presentationMode.wrappedValue.dismiss()
                             }
                         }
                     } label: {
-                        Text("Sign in")
+                        Text(isSignInViewPresented ? "Sign In" : "Register")
                             .font(.title2)
                             .padding()
                             .foregroundColor(.white)
@@ -63,16 +68,15 @@ struct SignIn: View {
                     .padding(.top)
                     .padding(.bottom, 5)
 
-                    NavigationLink {
-                        Register()
-                            .environmentObject(userConfig)
+                    Button {
+                        isSignInViewPresented.toggle()
                     } label: {
-                        Text("Don't have an account? Register")
+                        Text(isSignInViewPresented ? "Don't have an account? Register" : "Already have an account? Sign in")
                             .foregroundColor(.accentColor)
                     }
                     .padding(.top, 10)
                     
-                    Text("Welcome Back :)")
+                    Text(isSignInViewPresented ? "Welcome Back :)" : "By creating account, you are agreeing to our Terms of Service")
                         .font(.body.bold())
                         .foregroundColor(.secondary)
                         .multilineTextAlignment(.center)
@@ -80,14 +84,14 @@ struct SignIn: View {
                 }
             }
             .padding()
-        .navigationTitle("Sign In")
+        .navigationTitle(isSignInViewPresented ? "SignIn" : "Register")
         }
     }
 }
 
-struct SignIn_Previews: PreviewProvider {
+struct SignInOrRegisterView_Previews: PreviewProvider {
     static var previews: some View {
-        SignIn()
+        SignInOrRegisterView(isSignInViewPresented: true)
             .environmentObject(UserConfig())
     }
 }

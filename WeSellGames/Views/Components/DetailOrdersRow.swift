@@ -22,7 +22,8 @@ struct DetailOrdersRow: View {
             
             VStack(alignment: .leading, spacing: 10) {
                 Text(order.name)
-                    .bold()
+                    .font(.title3).bold()
+                    .lineLimit(2)
                 
                 Text("\(order.price.formatted(.currency(code: "USD")))")
             }

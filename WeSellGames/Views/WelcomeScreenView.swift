@@ -1,5 +1,5 @@
 //
-//  WelcomeScreen.swift
+//  WelcomeScreenView.swift
 //  WeSellGames
 //
 //  Created by Vitali Vyucheiski on 10/12/22.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct WelcomeScreen: View {
+struct WelcomeScreenView: View {
     @EnvironmentObject var userConfig: UserConfig
     
     let impactLight = UIImpactFeedbackGenerator(style: .light)
@@ -37,7 +37,7 @@ struct WelcomeScreen: View {
                         
                         HStack {
                             NavigationLink {
-                                Register()
+                                SignInOrRegisterView(isSignInViewPresented: false)
                                     .environmentObject(userConfig)
                             } label: {
                                 Text("Register")
@@ -56,7 +56,7 @@ struct WelcomeScreen: View {
                                 .padding(5)
                             
                             NavigationLink {
-                                SignIn()
+                                SignInOrRegisterView(isSignInViewPresented: true)
                                     .environmentObject(userConfig)
                             } label: {
                                 Text("Sign in")
@@ -95,9 +95,9 @@ struct WelcomeScreen: View {
     }
 }
 
-struct WelcomeScreen_Previews: PreviewProvider {
+struct WelcomeScreenView_Previews: PreviewProvider {
     static var previews: some View {
-        WelcomeScreen()
+        WelcomeScreenView()
             .environmentObject(UserConfig())
     }
 }
