@@ -34,7 +34,7 @@ class UserConfig: ObservableObject {
                 let db = Firestore.firestore()
                 db.collection("Users").document(result?.user.uid ?? "").setData(["email" : "anon"])
             } else {
-                print(error?.localizedDescription ?? "")
+                print(error?.localizedDescription ?? "Error")
             }
         }
     }
@@ -51,7 +51,7 @@ class UserConfig: ObservableObject {
                 //Updating orders
                 Orders().getData()
             } else {
-                print(error?.localizedDescription ?? "")
+                print(error?.localizedDescription ?? "Error")
             }
         }
     }
@@ -75,7 +75,7 @@ class UserConfig: ObservableObject {
                     //Updating orders
                     Orders().getData()
                 } else {
-                    print(error?.localizedDescription ?? "")
+                    print(error?.localizedDescription ?? "Error")
                 }
             }
         } else {
@@ -83,7 +83,7 @@ class UserConfig: ObservableObject {
             let credential = EmailAuthProvider.credential(withEmail: email, password: password)
             user?.link(with: credential) { [weak self] result, error in
                 if error != nil {
-                    print(error?.localizedDescription ?? "")
+                    print(error?.localizedDescription ?? "Error")
                 } else {
                     DispatchQueue.main.async {
                         self?.user.id = result?.user.uid ?? ""
@@ -140,6 +140,46 @@ class UserConfig: ObservableObject {
                         db.collection("Users").document(user?.uid ?? "").delete()
                     }
                 }
+            }
+        }
+    }
+    
+    func changeEmail(_ password: String, _ newEmail: String) {
+        let user = Auth.auth().currentUser
+        let credential = EmailAuthProvider.credential(withEmail: self.user.email, password: password)
+        
+        user?.reauthenticate(with: credential) { [weak self] result, error in
+            if error != nil {
+                print(error?.localizedDescription ?? "Error")
+            } else {
+                user?.updateEmail(to: newEmail) { [weak self] error in
+                    if error != nil {
+                        print(error?.localizedDescription ?? "Error")
+                    } else {
+                        DispatchQueue.main.async {
+                            self?.user.email = newEmail
+                        }
+                        let db = Firestore.firestore()
+                        db.collection("Users").document(user?.uid ?? "").updateData(["email": newEmail])
+                    }
+                }
+            }
+        }
+    }
+    
+    func changePassword(_ oldPassword: String, _ newPassword: String) {
+        let user = Auth.auth().currentUser
+        let credential = EmailAuthProvider.credential(withEmail: self.user.email, password: oldPassword)
+        
+        user?.reauthenticate(with: credential) { result, error in
+            if error != nil {
+                print(error?.localizedDescription ?? "Error")
+            } else {
+                user?.updatePassword(to: newPassword, completion: { error in
+                    if error != nil {
+                        print(error?.localizedDescription ?? "Error")
+                    }
+                })
             }
         }
     }
