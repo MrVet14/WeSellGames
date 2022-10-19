@@ -48,6 +48,7 @@ struct ContentView: View {
             userConfig.signedIn = userConfig.isSignedIn
             userConfig.getUserData()
             products.getData()
+            cartManager.getCart()
             orders.getData()
         }
     }

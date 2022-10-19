@@ -123,7 +123,7 @@ class UserConfig: ObservableObject {
         let user = Auth.auth().currentUser
         let credential = EmailAuthProvider.credential(withEmail: self.user.email, password: password)
 
-        user?.reauthenticate(with: credential) { result, error in
+        user?.reauthenticate(with: credential) { [weak self] result, error in
             if error != nil {
                 print(error?.localizedDescription ?? "Error")
             } else {
@@ -132,8 +132,8 @@ class UserConfig: ObservableObject {
                         print(error.localizedDescription)
                     } else {
                         DispatchQueue.main.async {
-                            self.signedIn = false
-                            self.isAnonymous = true
+                            self?.signedIn = false
+                            self?.isAnonymous = true
                         }
                         
                         let db = Firestore.firestore()
