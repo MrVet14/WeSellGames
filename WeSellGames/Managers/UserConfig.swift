@@ -30,6 +30,9 @@ class UserConfig: ObservableObject {
                     self?.signedIn = true
                     self?.isAnonymous = true
                 }
+                //Create new database entry for new user
+                let db = Firestore.firestore()
+                db.collection("Users").document(result?.user.uid ?? "").setData(["email" : "anon"])
             } else {
                 print(error?.localizedDescription ?? "")
             }
@@ -54,23 +57,47 @@ class UserConfig: ObservableObject {
     }
     
     func register(_ email: String, _ password: String) {
-        auth.createUser(withEmail: email, password: password) { [weak self] result, error in
-            if error == nil && result != nil {
-                DispatchQueue.main.async {
-                    self?.user.id = result?.user.uid ?? ""
-                    self?.user.email = email
-                    self?.signedIn = true
-                    self?.isAnonymous = false
+        print(isSignedIn)
+        print(isAnonymous)
+        
+        if !isSignedIn && isAnonymous {
+            auth.createUser(withEmail: email, password: password) { [weak self] result, error in
+                if error == nil && result != nil {
+                    DispatchQueue.main.async {
+                        self?.user.id = result?.user.uid ?? ""
+                        self?.user.email = email
+                        self?.signedIn = true
+                        self?.isAnonymous = false
+                    }
+                    //Create new database entry for new user
+                    let db = Firestore.firestore()
+                    db.collection("Users").document(result?.user.uid ?? "").setData(["email" : email])
+                    //Updating orders
+                    Orders().getData()
+                } else {
+                    print(error?.localizedDescription ?? "")
                 }
-                //Create new database entry for new user
-                let db = Firestore.firestore()
-                db.collection("Users").document(result?.user.uid ?? "").setData(["email" : email])
-                //Updating orders
-                Orders().getData()
-            } else {
-                print(error?.localizedDescription ?? "")
+            }
+        } else {
+            let user = Auth.auth().currentUser
+            let credential = EmailAuthProvider.credential(withEmail: email, password: password)
+            user?.link(with: credential) { [weak self] result, error in
+                if error != nil {
+                    print(error?.localizedDescription ?? "")
+                } else {
+                    DispatchQueue.main.async {
+                        self?.user.id = result?.user.uid ?? ""
+                        self?.user.email = email
+                        self?.signedIn = true
+                        self?.isAnonymous = false
+                    }
+                    //Add Email to the existing entry
+                    let db = Firestore.firestore()
+                    db.collection("Users").document(result?.user.uid ?? "").setData(["email" : email])
+                }
             }
         }
+        
     }
     
     func signOut() {

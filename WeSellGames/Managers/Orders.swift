@@ -38,6 +38,7 @@ class Orders: ObservableObject {
             }
         }
     }
+    
     // FIX: Does not updates properly after switching accounts
     func getData() {
         orders.removeAll()
