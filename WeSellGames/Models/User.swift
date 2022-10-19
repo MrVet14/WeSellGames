@@ -8,8 +8,8 @@
 import Foundation
 
 struct User: Identifiable {
-    var id = "user"
+    var id: String
     var email: String
-    //Some additional functiones might be added in some near or not near future
+    //Some additional functions might be added in some near or not near future
 }
 

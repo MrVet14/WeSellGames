@@ -14,9 +14,9 @@ import GoogleSignInSwift
 
 class UserConfig: ObservableObject {
     let auth = Auth.auth()
-    @Published var isAnonymous = false
+    @Published var isAnonymous = true
     @Published var signedIn = false
-    @Published var user = User(email: "")
+    @Published var user = User(id: "", email: "")
     
     var isSignedIn: Bool {
         return auth.currentUser != nil
@@ -26,6 +26,7 @@ class UserConfig: ObservableObject {
         auth.signInAnonymously { [weak self] result, error in
             if error == nil {
                 DispatchQueue.main.async {
+                    self?.user.id = result?.user.uid ?? ""
                     self?.signedIn = true
                     self?.isAnonymous = true
                 }
@@ -39,6 +40,7 @@ class UserConfig: ObservableObject {
         auth.signIn(withEmail: email, password: password) { [weak self] result, error in
             if error == nil && result != nil {
                 DispatchQueue.main.async {
+                    self?.user.id = result?.user.uid ?? ""
                     self?.user.email = email
                     self?.signedIn = true
                     self?.isAnonymous = false
@@ -53,10 +55,14 @@ class UserConfig: ObservableObject {
         auth.createUser(withEmail: email, password: password) { [weak self] result, error in
             if error == nil && result != nil {
                 DispatchQueue.main.async {
+                    self?.user.id = result?.user.uid ?? ""
                     self?.user.email = email
                     self?.signedIn = true
                     self?.isAnonymous = false
                 }
+                //Create new database entry for new user
+                let db = Firestore.firestore()
+                db.collection("Users").document(result?.user.uid ?? "").setData(["email" : email])
             } else {
                 print(error?.localizedDescription ?? "")
             }
@@ -67,59 +73,46 @@ class UserConfig: ObservableObject {
         try? auth.signOut()
         DispatchQueue.main.async {
             self.signedIn = false
+            self.isAnonymous = true
             self.user.email = ""
         }
     }
     
     func getUserData() {
-        let user = Auth.auth().currentUser
-        
-        if let user = user {
-            let email = user.email
+        if let user = Auth.auth().currentUser {
             DispatchQueue.main.async {
-                self.user.email = email ?? "test"
+                self.user.id = user.uid
+                self.user.email = user.email ?? ""
+                self.isAnonymous = user.isAnonymous
             }
         }
     }
     
-    func deleteAcc() {
+    func deleteAcc(_ password: String) {
         let user = Auth.auth().currentUser
-            
-        user?.delete { error in
-            if let error = error {
-                print(error.localizedDescription)
+        let credential = EmailAuthProvider.credential(withEmail: self.user.email, password: password)
+
+        user?.reauthenticate(with: credential) { result, error in
+            if error != nil {
+                print(error?.localizedDescription ?? "Error")
             } else {
-                DispatchQueue.main.async {
-                    self.signedIn = false
-                    self.user.email = ""
+                user?.delete { error in
+                    if let error = error {
+                        print(error.localizedDescription)
+                    } else {
+                        DispatchQueue.main.async {
+                            self.signedIn = false
+                            self.isAnonymous = true
+                        }
+                        
+                        let db = Firestore.firestore()
+                        db.collection("Users").document(user?.uid ?? "").delete()
+                    }
                 }
             }
         }
-    
     }
-         
-//    func deleteAcc(_ password: String) {
-//        let user = Auth.auth().currentUser
-//        let credential: AuthCredential = EmailAuthProvider.credential(withEmail: self.user.email, password: password)
-//        user?.reauthenticate(with: credential) { err, arg  in
-//            if err != nil {
-//                print(err ?? "")
-//            } else {
-//                user?.delete { error in
-//                    if let error = error {
-//                        print(error.localizedDescription)
-//                    } else {
-//                        DispatchQueue.main.async {
-//                            self.signedIn = false
-//                            self.user.email = ""
-//                        }
-//                    }
-//                }
-//            }
-//        }
-//
-//    }
-    
+
 //    func googleSignIn() {
 //        guard let clientID = FirebaseApp.app()?.options.clientID else { return }
 //

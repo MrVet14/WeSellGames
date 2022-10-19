@@ -12,6 +12,7 @@ struct ProfileView: View {
     @EnvironmentObject var userConfig: UserConfig
     @EnvironmentObject var orders: Orders
     @State private var password = ""
+    @State private var alertPresented = false
     
     let haptic = UINotificationFeedbackGenerator()
     let impactLight = UIImpactFeedbackGenerator(style: .light)
@@ -62,11 +63,21 @@ struct ProfileView: View {
                     }
                     Button {
                         haptic.notificationOccurred(.error)
-                        userConfig.deleteAcc()
+                        alertPresented.toggle()
                     } label: {
                         Text("Delete account")
                             .foregroundColor(.red)
                     }
+                    .alert("Delete Account", isPresented: $alertPresented, actions: {
+                        SecureField("Password", text: $password)
+                        Button("Delete", role: .destructive) {
+                            haptic.notificationOccurred(.success)
+                            userConfig.deleteAcc(password)
+                        }
+                        Button("Cancel", role: .cancel) { password = "" }
+                    }, message: {
+                        Text("Enter password in order to delete your account")
+                    })
                 }
                 .frame(maxHeight: .infinity, alignment: .bottom)
                     
